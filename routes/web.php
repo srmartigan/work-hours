@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/enviar', function () {
+   echo 'Estamos en la ruta';
+});
