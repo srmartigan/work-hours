@@ -11,10 +11,22 @@
 |
 */
 
+use App\Http\Controllers\ParteDiarioController;
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('app.inicio');
+});
+Route::get('documentos', function () {
+    return view('app.documentos');
 });
 
-Route::post('/enviar', function () {
-   echo 'Estamos en la ruta';
+
+Route::get('parte-diario',[ParteDiarioController::class,'index']);
+
+Route::post('incluir-parte-diario',[ParteDiarioController::class,'incluir']);
+
+Route::get('configuracion-app', function () {
+    return view('config.configuracion');
 });
+
+Route::get('calendario', [ParteDiarioController::class,'incluir']);
