@@ -12,13 +12,13 @@
                     @csrf
                     <div class="row">
                         <div class="col-sm-6">
-                            {!! Field::date('dia') !!}
+                            {!! Field::date('dia', ['required']) !!}
                         </div>
                         <div class="col-sm-6">
-                            {!! Field::time('hora de entrada') !!}
+                            {!! Field::time('hora de entrada' , ['required']) !!}
                         </div>
                     </div>
-                    {!! Field::time('hora de salida') !!}
+                    {!! Field::time('hora de salida' , ['required']) !!}
                     {!! Field::time('Total horas', ['disabled']) !!}
                     {!! Form::submit('Enviar', ['class' => 'btn btn-success']) !!}
                     {!! Form::close() !!}

@@ -28,12 +28,7 @@ class RutasVistasAppTest extends TestCase
             ->assertSee('PARTE DIARIO');
     }
 
-    /** @test */
-    public function testRutaEnviarParteDiario()
-    {
-        $this->post( '/incluir-parte-diario' )
-            ->assertStatus(200);
-    }
+
     /** @test */
     public function testRutaDocumentos()
     {

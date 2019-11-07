@@ -29,4 +29,4 @@ Route::get('configuracion-app', function () {
     return view('config.configuracion');
 });
 
-Route::get('calendario', [ParteDiarioController::class,'incluir']);
+Route::get('calendario', [ParteDiarioController::class,'calendario']);
