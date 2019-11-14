@@ -11,15 +11,22 @@
                     {!! Form::open(['url' => 'incluir-parte-diario','method' => 'post']) !!}
                     @csrf
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             {!! Field::date('dia', ['required']) !!}
+                        </div>
+                        <div class="col-sm-4">
+                            {!! Field::date('mes', ['required']) !!}
+                        </div>
+                        <div class="col-sm-4">
+                            {!! Field::date('year', ['required']) !!}
                         </div>
                         <div class="col-sm-6">
                             {!! Field::time('hora de entrada' , ['required']) !!}
                         </div>
+                        <div class="col-sm-6">
+                        {!! Field::time('hora de salida' , ['required']) !!}
+                        </div>
                     </div>
-                    {!! Field::time('hora de salida' , ['required']) !!}
-                    {!! Field::time('Total horas', ['disabled']) !!}
                     {!! Form::submit('Enviar', ['class' => 'btn btn-success']) !!}
                     {!! Form::close() !!}
                 </div>

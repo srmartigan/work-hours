@@ -2,30 +2,33 @@
 @section('titulo','Calendario')
 @section('contenido')
     <div class="container">
-        <h1>Estamos en la vista Calendario</h1>
-        <table class="table">
-            <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Fecha</th>
-                <th scope="col">H/Entrada</th>
-                <th scope="col">H/Salida</th>
-                <th scope="col">Total Horas</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php $fila = 0 ?>
-            @foreach($listadoDePartesDiario as $parteDiario)
+
+        <div class="table-responsive">
+            <h1>Listado Calendario</h1>
+            <table class="table">
+                <thead class="thead-dark">
                 <tr>
-                    <th scope="row">{{++$fila}}</th>
-                    <td>{{$parteDiario->fecha}}</td>
-                    <td>{{$parteDiario->HoraEntrada}}</td>
-                    <td>{{$parteDiario->HoraSalida}}</td>
-                    <td>{{$parteDiario->TotalHoras}}</td>
+                    <th scope="col">#</th>
+                    <th scope="col" class="th-lg">Fecha</th>
+                    <th scope="col" class="th-lg">H/E</th>
+                    <th scope="col" class="th-lg">H/S</th>
+                    <th scope="col" class="th-lg">T/H</th>
                 </tr>
-            @endforeach
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                @foreach($listadoDePartesDiario as $key => $parteDiario)
+                    <tr>
+                        <th scope="row">{{ ++$key + (($listadoDePartesDiario->currentPage() - 1 ) * $listadoDePartesDiario->perPage())  }}</th>
+                        <td class="th-lg">{{$parteDiario->fecha}}</td>
+                        <td class="th-lg">{{$parteDiario->HoraEntrada}}</td>
+                        <td class="th-lg">{{$parteDiario->HoraSalida}}</td>
+                        <td class="th-lg">{{$parteDiario->TotalHoras}}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+            {{ $listadoDePartesDiario->links() }}
+        </div>
 
     </div>
 

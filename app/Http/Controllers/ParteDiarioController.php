@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\ParteDiario;
 use Carbon\Carbon;
+use DateTime;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -17,9 +19,13 @@ class ParteDiarioController extends Controller
 
     public function incluir(Request $request): View
     {
+        $fecha = $this->convertDateArray($request->dia);
+
         $parteDiario = new ParteDiario();
         $parteDiario->userId = 1;
-        $parteDiario->fecha = $request->dia;
+        $parteDiario->dia = $fecha['dia'];
+        $parteDiario->mes = $fecha['mes'];
+        $parteDiario->year = $fecha['year'];
         $parteDiario->HoraEntrada = $request->hora_de_entrada;
         $parteDiario->HoraSalida = $request->hora_de_salida;
         $parteDiario->TotalHoras = $this->calcularTotalHoras($request->hora_de_entrada, $request->hora_de_salida);
@@ -27,14 +33,34 @@ class ParteDiarioController extends Controller
 
         return view('app.inicio');
     }
-
+    /**
+     * @param String $fecha
+     * @return mixed
+     */
+    public function convertDateArray(String $fecha) : Array
+    {
+        $CarbonFecha = Carbon::createFromFormat('Y-m-d',$fecha);
+        $resultado = [
+            'dia' => $CarbonFecha->day,
+            'mes' => $CarbonFecha->month,
+            'year' => $CarbonFecha->year
+        ];
+        return $resultado;
+    }
     public function calendario()
     {
-        $parteDiario = ParteDiario::all()->sortBy('fecha');
+        ParteDiario::clearBootedModels();
+        $parteDiario = ParteDiario::query()
+            ->orderBy('year')
+            ->orderBy('mes')
+            ->paginate(15);
 
-        return view('app.calendario')->with([
+        //$this->dateFormatSpanish($parteDiario); // convert date "Y-m-d" to "d-m-Y"
+        return response()->json($parteDiario);
+
+        /*return view('app.calendario')->with([
             'listadoDePartesDiario' => $parteDiario,
-        ]);
+        ]);*/
     }
 
 
@@ -53,5 +79,17 @@ class ParteDiarioController extends Controller
         return $totalHoras;
 
     }
+
+    /**
+     * @param \Illuminate\Contracts\Pagination\LengthAwarePaginator $parteDiario
+     */
+    public function dateFormatSpanish(LengthAwarePaginator $parteDiario): void
+    {
+        foreach ($parteDiario as $parte) {
+            $parte->fecha = DateTime::createFromFormat('Y-m-d', $parte->fecha)->format('d-m-Y');
+        }
+    }
+
+
 
 }

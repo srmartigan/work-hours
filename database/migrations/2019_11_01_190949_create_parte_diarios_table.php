@@ -17,7 +17,9 @@ class CreateParteDiariosTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('userId');
             $table->foreign('userId')->references('id')->on('users');
-            $table->date('fecha');
+            $table->string('dia');
+            $table->string('mes');
+            $table->string('year');
             $table->string('HoraEntrada',5);
             $table->string('HoraSalida',5);
             $table->string('TotalHoras',5);
