@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Esqueleto basico de la app">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ParteDiarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ParteDiarioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ParteDiario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ParteDiario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/ParteDiarioFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ParteDiarioFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_01_190949_create_parte_diarios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_01_190949_create_parte_diarios_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/calendario.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/calendario.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/app/formularioParteDiario.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/formularioParteDiario.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -206,7 +206,7 @@
       <workItem from="1573063592659" duration="29422000" />
       <workItem from="1573430089394" duration="2516000" />
       <workItem from="1573682347995" duration="108000" />
-      <workItem from="1573682481544" duration="4461000" />
+      <workItem from="1573682481544" duration="16175000" />
     </task>
     <servers />
   </component>

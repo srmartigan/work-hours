@@ -17,12 +17,13 @@ class CreateParteDiariosTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('userId');
             $table->foreign('userId')->references('id')->on('users');
-            $table->string('dia');
-            $table->string('mes');
-            $table->string('year');
+            $table->date('fecha');
             $table->string('HoraEntrada',5);
             $table->string('HoraSalida',5);
             $table->string('TotalHoras',5);
+            $table->boolean('almuerzo')->nullable();
+            $table->boolean('comida')->nullable();
+            $table->boolean('merienda')->nullable();
             $table->timestamps();
         });
     }

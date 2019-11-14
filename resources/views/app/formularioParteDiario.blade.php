@@ -11,15 +11,10 @@
                     {!! Form::open(['url' => 'incluir-parte-diario','method' => 'post']) !!}
                     @csrf
                     <div class="row">
-                        <div class="col-sm-4">
-                            {!! Field::date('dia', ['required']) !!}
+                        <div class="col-sm-6 offset-3">
+                            {!! Field::date('fecha', ['required']) !!}
                         </div>
-                        <div class="col-sm-4">
-                            {!! Field::date('mes', ['required']) !!}
-                        </div>
-                        <div class="col-sm-4">
-                            {!! Field::date('year', ['required']) !!}
-                        </div>
+
                         <div class="col-sm-6">
                             {!! Field::time('hora de entrada' , ['required']) !!}
                         </div>
