@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\ListadoPartesController;
 use App\Http\Controllers\ParteDiarioController;
 
 Route::get('/', function () {
@@ -29,4 +30,5 @@ Route::get('configuracion-app', function () {
     return view('config.configuracion');
 });
 
-Route::get('calendario', [ParteDiarioController::class,'calendario']);
+Route::get('calendario', [ListadoPartesController::class,'index']);
+

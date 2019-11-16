@@ -11,7 +11,7 @@
                     {!! Form::open(['url' => 'incluir-parte-diario','method' => 'post']) !!}
                     @csrf
                     <div class="row">
-                        <div class="col-sm-6 offset-3">
+                        <div class="col-sm-6 col-lg-12">
                             {!! Field::date('fecha', ['required']) !!}
                         </div>
 
@@ -21,6 +21,25 @@
                         <div class="col-sm-6">
                         {!! Field::time('hora de salida' , ['required']) !!}
                         </div>
+                        <div class="form-check col-sm-4 col-lg-12">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input"
+                                       name=" almuerzo" value="1">Almuerzo
+                            </label>
+                        </div>
+                        <div class="form-check col-sm-4 col-lg-12">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input"
+                                       name = "comida" value="1">Comida
+                            </label>
+                        </div>
+                        <div class="form-check col-sm-4 col-lg-12 mb-3">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input"
+                                       name ="merienda" value="1">Merienda
+                            </label>
+                        </div>
+                        <hr>
                     </div>
                     {!! Form::submit('Enviar', ['class' => 'btn btn-success']) !!}
                     {!! Form::close() !!}
