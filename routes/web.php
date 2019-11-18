@@ -32,3 +32,7 @@ Route::get('configuracion-app', function () {
 
 Route::get('calendario', [ListadoPartesController::class,'index']);
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

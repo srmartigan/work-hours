@@ -1,0 +1,12 @@
+Nombre tabla: configuracion_usuarios
+
+Estructura:
+
+    -id
+    -userId
+    -descuento_almuerzo (String minutos)
+    -descuento_comida   (String minutos)
+    -descuento_merienda (String minutos)
+    -precio_hora  (float dinero)
+    -precio_hora_estructurada (float dinero)
+    -precio_hora_extra (float dinero)
