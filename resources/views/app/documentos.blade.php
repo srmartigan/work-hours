@@ -1,4 +1,4 @@
-@extends('layaut.layaut')
+@extends('layouts.layout')
 @section('titulo','Documentos')
 @section('contenido')
     <div class="container">

@@ -23,7 +23,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-@include('layaut.barraNavegacion')
+@include('layouts.barraNavegacion')
 
 @yield('contenido')
 </body>

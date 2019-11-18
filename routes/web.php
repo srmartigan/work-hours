@@ -11,15 +11,14 @@
 |
 */
 
+use App\Http\Controllers\DocumentosController;
 use App\Http\Controllers\ListadoPartesController;
 use App\Http\Controllers\ParteDiarioController;
 
 Route::get('/', function () {
     return view('app.inicio');
 });
-Route::get('documentos', function () {
-    return view('app.documentos');
-});
+Route::get('documentos',[DocumentosController::class,'index']);
 
 
 Route::get('parte-diario',[ParteDiarioController::class,'index']);
@@ -35,4 +34,4 @@ Route::get('calendario', [ListadoPartesController::class,'index']);
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+

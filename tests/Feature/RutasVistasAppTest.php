@@ -23,6 +23,7 @@ class RutasVistasAppTest extends TestCase
     /** @test */
     public function testRutaParteDiario()
     {
+        $this->withoutMiddleware();
         $this->get('parte-diario')
             ->assertStatus(200)
             ->assertSee('PARTE DIARIO');
@@ -32,6 +33,7 @@ class RutasVistasAppTest extends TestCase
     /** @test */
     public function testRutaDocumentos()
     {
+        $this->withoutMiddleware();
         $this->get('/documentos')
             ->assertStatus(200)
             ->assertSee('Estamos en Documentos');
@@ -39,6 +41,7 @@ class RutasVistasAppTest extends TestCase
     /** @test */
     public function testRutaCalendario()
     {
+        $this->withoutMiddleware();
         $this->get('/calendario')
             ->assertStatus(200)
             ->assertSee('Calendario');

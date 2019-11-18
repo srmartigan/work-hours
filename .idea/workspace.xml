@@ -2,11 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Esqueleto basico de la app">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/RutasAuthTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConfiguracionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConfiguracionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocumentosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocumentosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ParteDiarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ParteDiarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/documentos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/documentos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/formularioParteDiario.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/formularioParteDiario.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/inicio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/inicio.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/listadoPartes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/listadoPartes.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layaut/barraNavegacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/barraNavegacion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layaut/layaut.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,12 +149,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Pagination/LengthAwarePaginator.php&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Routing/Controller.php&#10;D:/wamp64/www/work-hours/Roadmap.md&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php&#10;D:/wamp64/www/work-hours/.env" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/spanish.dic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\work-hours\resources\views\layouts" />
       <recent name="D:\wamp64\www\work-hours" />
     </key>
   </component>
@@ -154,13 +171,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.RutasVistasAppTest.testRutaEnviarParteDiario">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="ExampleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ExampleTest" file="$PROJECT_DIR$/tests/Feature/ExampleTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="ExampleTest.testBasicTest (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ExampleTest" file="$PROJECT_DIR$/tests/Feature/ExampleTest.php" method="testBasicTest" scope="Method" />
+    <configuration name="RutasVistasAppTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RutasVistasAppTest" file="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="RutasVistasAppTest.testRutaEnviarParteDiario" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -181,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.RutasVistasAppTest" />
         <item itemvalue="PHPUnit.RutasVistasAppTest.testRutaEnviarParteDiario" />
         <item itemvalue="PHPUnit.RutasVistasAppTest.testRutaParteDiario" />
         <item itemvalue="PHPUnit.rutas_de_las_vistas_app_Test" />
         <item itemvalue="PHPUnit.ExampleTest" />
-        <item itemvalue="PHPUnit.ExampleTest.testBasicTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +229,7 @@
       <workItem from="1573430089394" duration="2516000" />
       <workItem from="1573682347995" duration="108000" />
       <workItem from="1573682481544" duration="28880000" />
-      <workItem from="1573945752228" duration="14248000" />
+      <workItem from="1573945752228" duration="21123000" />
     </task>
     <servers />
   </component>

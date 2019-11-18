@@ -1,4 +1,4 @@
-@extends('layaut.layaut')
+@extends('layouts.layout')
 @section('titulo','Parte Diario')
 @section('contenido')
     <!-- Formulario Parte Diario simple -->

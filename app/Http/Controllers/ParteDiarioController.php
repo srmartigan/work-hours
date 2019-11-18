@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Helper;
 use App\ParteDiario;
-use Carbon\Carbon;
-use DateTime;
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 
 class ParteDiarioController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index(): View
     {
         return view('app.formularioParteDiario');
@@ -36,7 +38,7 @@ class ParteDiarioController extends Controller
 
     public function editar(Request $request)
     {
-
+        // TODO: Añadir logica para editar los partes diarios.
     }
 
 }
