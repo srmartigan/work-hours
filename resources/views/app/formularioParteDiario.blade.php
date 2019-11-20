@@ -12,14 +12,14 @@
                     @csrf
                     <div class="row">
                         <div class="col-sm-6 col-lg-12">
-                            {!! Field::date('fecha', ['required']) !!}
+                            {!! Field::date('fecha', ['required = ""']) !!}
                         </div>
 
                         <div class="col-sm-6">
-                            {!! Field::time('hora de entrada' , ['required']) !!}
+                            {!! Field::time('hora de entrada' , ['required = ""']) !!}
                         </div>
                         <div class="col-sm-6">
-                        {!! Field::time('hora de salida' , ['required']) !!}
+                        {!! Field::time('hora de salida' , ['required = ""']) !!}
                         </div>
                         <div class="form-check col-sm-4 col-lg-12">
                             <label class="form-check-label">

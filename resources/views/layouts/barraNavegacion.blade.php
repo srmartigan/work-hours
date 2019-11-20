@@ -16,7 +16,13 @@
                     <a class="nav-link" href="{{Url('parte-diario')}}">Parte Diario</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link " href="{{Url('calendario')}}">Listado</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link " href="{{Url('documentos')}}">Documentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{{Url('configuracion-usuario')}}">Configuracion</a>
                 </li>
             </ul>
 
