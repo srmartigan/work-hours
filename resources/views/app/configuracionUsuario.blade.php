@@ -20,7 +20,10 @@
                             </div>
                             <hr>
                         </div>
-                        {!! Form::submit('Guardar', ['class' => 'btn btn-success']) !!}
+                        <div class="col-sm-12 text-center">
+                            {!! Form::submit('Guardar', ['class' => 'btn btn-success']) !!}
+                            <a href="{{ url('/') }}" class="btn btn-success">Cancelar</a>
+                        </div>
                         {!! Form::close() !!}
                     </div>
                 </div>

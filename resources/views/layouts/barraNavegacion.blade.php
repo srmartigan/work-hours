@@ -16,7 +16,7 @@
                     <a class="nav-link" href="{{Url('parte-diario')}}">Parte Diario</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{Url('calendario')}}">Listado</a>
+                    <a class="nav-link " href="{{Url('listado-partes')}}">Listado</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="{{Url('documentos')}}">Documentos</a>

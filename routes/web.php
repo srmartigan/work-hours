@@ -33,7 +33,8 @@ Route::get('configuracion-app', function () {
 });
 
 //Rutas Listado Partes
-Route::get('calendario', [ListadoPartesController::class,'index']);
+Route::get('listado-partes', [ListadoPartesController::class,'index']);
+Route::post('listado-partes', [ListadoPartesController::class,'filtro']);
 
 // Rutas configuracion Usuario
 Route::get('configuracion-usuario', [ConfiguracionUsuariosController::class , 'index']);

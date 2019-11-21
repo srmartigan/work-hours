@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Database\Seeder;
 
 
@@ -17,6 +18,21 @@ class UserSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => bcrypt('1234')
         ]);
-        factory(\App\User::class, 10)->create();
+        DB::table('Users')->insert([
+            'name' => 'lolo',
+            'email' => 'lolo@admin.com',
+            'password' => bcrypt('1234')
+        ]);
+
+        $users = User::all();
+
+        foreach ($users as $user) {
+            DB::table('configuracion_usuarios')->insert([
+                'userId' => $user->id,
+                'descuento_almuerzo' => 0,
+                'descuento_comida' => 0,
+                'descuento_merienda' => 0
+            ]);
+        }
     }
 }

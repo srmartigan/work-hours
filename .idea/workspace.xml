@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Esqueleto basico de la app">
-      <change afterPath="$PROJECT_DIR$/app/ConfiguracionUsuario.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ConfiguracionUsuariosController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/app/configuracionUsuario.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ConfiguracionPersonal.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_18_002655_configuracion__usuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_18_002655_configuracion__usuarios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/documentos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/documentos.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/formularioParteDiario.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/formularioParteDiario.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ParteDiarioFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ParteDiarioFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_18_002655_configuracion__usuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_11_002655_configuracion__usuarios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/configuracionUsuario.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/configuracionUsuario.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/listadoPartes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/listadoPartes.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/barraNavegacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/barraNavegacion.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -218,7 +217,7 @@
       <workItem from="1573430089394" duration="2516000" />
       <workItem from="1573682347995" duration="108000" />
       <workItem from="1573682481544" duration="28880000" />
-      <workItem from="1573945752228" duration="34434000" />
+      <workItem from="1573945752228" duration="44438000" />
     </task>
     <servers />
   </component>
