@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -10,8 +11,12 @@ use App\Http\Controllers\ParteDiarioController;
 
 class RutasVistasAppTest extends TestCase
 {
-
-
+    use RefreshDatabase;
+    public function create_and_login_user()
+    {
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+    }
     /** @test */
     public function testRutaInicio()
     {
@@ -23,7 +28,7 @@ class RutasVistasAppTest extends TestCase
     /** @test */
     public function testRutaParteDiario()
     {
-        $this->withoutMiddleware();
+        $this->create_and_login_user();
         $this->get('parte-diario')
             ->assertStatus(200)
             ->assertSee('PARTE DIARIO');
@@ -33,18 +38,18 @@ class RutasVistasAppTest extends TestCase
     /** @test */
     public function testRutaDocumentos()
     {
-        $this->withoutMiddleware();
+        $this->create_and_login_user();
         $this->get('/documentos')
             ->assertStatus(200)
             ->assertSee('Estamos en Documentos');
     }
     /** @test */
-    public function testRutaCalendario()
+    public function testRutaListadoPartes()
     {
-        $this->withoutMiddleware();
-        $this->get('/calendario')
+        $this->create_and_login_user();
+        $this->get('/listado-partes')
             ->assertStatus(200)
-            ->assertSee('Calendario');
+            ->assertSee('Listado Partes');
     }
 
 }

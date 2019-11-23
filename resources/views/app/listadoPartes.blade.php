@@ -3,7 +3,7 @@
 @section('contenido')
     <div class="container">
 
-        <h2 class="text-center mt-3">Listado Calendario</h2>
+        <h2 class="text-center mt-3">Listado Partes</h2>
         <hr>
         <form action="{{url('listado-partes')}}" method="post" class=" text-center mb-2">
                  @csrf

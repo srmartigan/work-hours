@@ -22,7 +22,7 @@ class ListadoPartesController extends Controller
         $mesActual = $fechaActual->format('m');
 
         $parteDiario = ParteDiario::query()
-            ->where('userId','=',Auth::id()-1)
+            ->where('userId','=',Auth::id())
             ->whereMonth('fecha',$mesActual)
             ->orderBy('fecha')
             ->paginate(15);
@@ -41,7 +41,7 @@ class ListadoPartesController extends Controller
     function filtro(Request $request)
     {
         $parteDiario = ParteDiario::query()
-            ->where('userId','=',Auth::id()-1)
+            ->where('userId','=',Auth::id())
             ->whereMonth('fecha',$request->filtroMes)
             ->orderBy('fecha')
             ->paginate(15);
