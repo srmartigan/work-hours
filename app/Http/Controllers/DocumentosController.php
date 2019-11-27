@@ -49,8 +49,10 @@ class DocumentosController extends Controller
 
     public function calcularTotalPrecioNormal($totalHorasNormales)
     {
-        $precioHora = ConfiguracionUsuario::all()->where('userId', '=', Auth::id());
-        return number_format($totalHorasNormales * $precioHora[0]->precio_hora, 2);
+        $precioHora = ConfiguracionUsuario::query()
+            ->where('userId', '=', Auth::id())->first();
+        //dd($precioHora);
+        return number_format($totalHorasNormales * $precioHora->precio_hora, 2);
     }
 
     /**
