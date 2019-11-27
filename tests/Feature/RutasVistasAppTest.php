@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Helper;
 use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -40,8 +41,9 @@ class RutasVistasAppTest extends TestCase
     {
         $this->create_and_login_user();
         $this->get('/documentos')
-            ->assertStatus(200)
-            ->assertSee('Estamos en Documentos');
+           ->assertSee('Documentos');
+
+
     }
     /** @test */
     public function testRutaListadoPartes()
@@ -50,6 +52,7 @@ class RutasVistasAppTest extends TestCase
         $this->get('/listado-partes')
             ->assertStatus(200)
             ->assertSee('Listado Partes');
+
     }
 
 }

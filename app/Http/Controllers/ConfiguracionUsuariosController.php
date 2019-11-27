@@ -26,6 +26,9 @@ class ConfiguracionUsuariosController extends Controller
             $config->descuento_almuerzo = 0;
             $config->descuento_comida = 0;
             $config->descuento_merienda = 0;
+            $config->precio_hora = 0;
+            $config->precio_hora_estructurada = 0;
+            $config->precio_hora_extra = 0;
             $config->save();
         }
             $config = ConfiguracionUsuario::query()
@@ -46,7 +49,10 @@ class ConfiguracionUsuariosController extends Controller
         $idUsuarioConfiguracion->update([
             'descuento_almuerzo' => $request->almuerzo,
             'descuento_comida' => $request->comida,
-            'descuento_merienda' => $request->merienda
+            'descuento_merienda' => $request->merienda,
+            'precio_hora' => $request->hora_normal,
+            'precio_hora_estructurada' => $request->hora_estructurada,
+            'precio_hora_extra' => $request->hora_extra
         ]);
 
         return view('app.inicio');

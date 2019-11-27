@@ -18,8 +18,7 @@ class ListadoPartesController extends Controller
     function index()
     {
         ParteDiario::clearBootedModels();
-        $fechaActual = new DateTime();
-        $mesActual = $fechaActual->format('m');
+        $mesActual = Helper::getMesActual();
 
         $parteDiario = ParteDiario::query()
             ->where('userId','=',Auth::id())

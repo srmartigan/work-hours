@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Esqueleto basico de la app">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/parteDiarioTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/userTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/HelperTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ConfiguracionUsuariosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ConfiguracionUsuariosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocumentosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocumentosController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ParteDiarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ParteDiarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app/listadoPartes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/listadoPartes.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/configuracionUsuario.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/configuracionUsuario.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app/documentos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app/documentos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -134,13 +140,16 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Pagination/LengthAwarePaginator.php&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Routing/Controller.php&#10;D:/wamp64/www/work-hours/Roadmap.md&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php&#10;D:/wamp64/www/work-hours/.env" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Pagination/LengthAwarePaginator.php&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Routing/Controller.php&#10;D:/wamp64/www/work-hours/Roadmap.md&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php&#10;D:/wamp64/www/work-hours/.env" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Unit" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\work-hours\tests\Unit" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\wamp64\www\work-hours\resources\views\layouts" />
       <recent name="D:\wamp64\www\work-hours" />
@@ -159,24 +168,24 @@
     </option>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
-    <configuration name="RutasConfiguracionUsuario.testVistaConfiguracionUsuario" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RutasConfiguracionUsuario" file="$PROJECT_DIR$/tests/Feature/RutasConfiguracionUsuario.php" method="testVistaConfiguracionUsuario" scope="Method" />
+    <configuration name="HelperTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\HelperTest" file="$PROJECT_DIR$/tests/Unit/HelperTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="RutasVistasAppTest.testRutaCalendario" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RutasVistasAppTest" file="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" method="testRutaCalendario" scope="Method" />
+    <configuration name="HelperTest.testGetMesActual" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\HelperTest" file="$PROJECT_DIR$/tests/Unit/HelperTest.php" method="testGetMesActual" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="RutasVistasAppTest.testRutaParteDiario" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RutasVistasAppTest" file="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" method="testRutaParteDiario" scope="Method" />
+    <configuration name="RutasVistasAppTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RutasVistasAppTest" file="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="parteDiarioTest.testCreateParteDiario" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\parteDiarioTest" file="$PROJECT_DIR$/tests/Feature/parteDiarioTest.php" method="testCreateParteDiario" scope="Method" />
+    <configuration name="RutasVistasAppTest.testRutaDocumentos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RutasVistasAppTest" file="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" method="testRutaDocumentos" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="parteDiarioTest.testVistaParteDiario" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\parteDiarioTest" file="$PROJECT_DIR$/tests/Feature/parteDiarioTest.php" method="testVistaParteDiario" scope="Method" />
+    <configuration name="RutasVistasAppTest.testRutaListadoPartes" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RutasVistasAppTest" file="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" method="testRutaListadoPartes" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -185,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.parteDiarioTest.testVistaParteDiario" />
-        <item itemvalue="PHPUnit.parteDiarioTest.testCreateParteDiario" />
-        <item itemvalue="PHPUnit.RutasVistasAppTest.testRutaParteDiario" />
-        <item itemvalue="PHPUnit.RutasConfiguracionUsuario.testVistaConfiguracionUsuario" />
-        <item itemvalue="PHPUnit.RutasVistasAppTest.testRutaCalendario" />
+        <item itemvalue="PHPUnit.RutasVistasAppTest.testRutaListadoPartes" />
+        <item itemvalue="PHPUnit.RutasVistasAppTest.testRutaDocumentos" />
+        <item itemvalue="PHPUnit.HelperTest" />
+        <item itemvalue="PHPUnit.RutasVistasAppTest" />
+        <item itemvalue="PHPUnit.HelperTest.testGetMesActual" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +225,7 @@
       <workItem from="1573430089394" duration="2516000" />
       <workItem from="1573682347995" duration="108000" />
       <workItem from="1573682481544" duration="28880000" />
-      <workItem from="1573945752228" duration="77591000" />
+      <workItem from="1573945752228" duration="119311000" />
     </task>
     <servers />
   </component>
@@ -245,6 +254,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/work_hours@RutasVistasAppTest_testRutaDocumentos.xml" NAME="RutasVistasAppTest.testRutaDocumentos Coverage Results" MODIFIED="1574861739060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/work_hours@ExampleTest_testBasicTest__1_.xml" NAME="ExampleTest.testBasicTest (1) Coverage Results" MODIFIED="1572269904724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

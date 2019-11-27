@@ -21,7 +21,8 @@ Route::get('/', function () {
 });
 
 // Rutas Documentos
-Route::get('documentos',[DocumentosController::class,'index']);
+Route::get('documentos','DocumentosController@index');
+Route::post('documentos','DocumentosController@listarMes');
 
 // Rutas Parte diario
 Route::get('parte-diario',[ParteDiarioController::class,'index']);

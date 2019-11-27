@@ -28,7 +28,7 @@ class Helper
     /**
      * @param \Illuminate\Contracts\Pagination\LengthAwarePaginator $parteDiario
      */
-    public static function dateFormatSpanish(LengthAwarePaginator $parteDiario): void
+    public static function dateFormatSpanish($parteDiario): void
     {
         foreach ($parteDiario as $parte) {
             $parte->fecha = DateTime::createFromFormat('Y-m-d', $parte->fecha)->format('d-m-Y');
@@ -48,5 +48,30 @@ class Helper
             'year' => $CarbonFecha->year
         ];
         return $resultado;
+    }
+
+    public static  function getMesActual():string
+    {
+        $fechaActual = new DateTime();
+        $mesActual = $fechaActual->format('m');
+        return $mesActual;
+    }
+
+    public static function sumarHorasNormales($listadoPartesDiarios)
+    {
+        $tiempo=0;
+        foreach ($listadoPartesDiarios as $partesDiario){
+            $tiempo += self::convertirHoraEnMinutos(
+                Carbon::createFromTimeString($partesDiario->TotalHoras)->format('H:i')
+            );
+        }
+        return number_format($tiempo/60,2,'.','');
+    }
+
+    public static function convertirHoraEnMinutos(string $hora) : int {
+
+        $horaTroceada = explode(':',$hora);
+        $minutosTotales = ($horaTroceada[0] * 60) + $horaTroceada[1];
+        return $minutosTotales;
     }
 }
