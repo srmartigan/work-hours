@@ -7,8 +7,9 @@ namespace App;
 use Carbon\Carbon;
 use DateTime;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Http\Request;
 
-class Helper
+class helper
 {
     public static function calcularTotalHoras(string $hora_de_entrada, string $hora_de_salida): string
     {
@@ -19,6 +20,34 @@ class Helper
         $horaEntrada = Carbon::createFromTimeString($hora_de_entrada);
         $horaSalida = Carbon::createFromTimeString($hora_de_salida);
         $totalMinutos = Carbon::parse($horaSalida)->diffInMinutes($horaEntrada);
+
+        $totalHoras = Carbon::createFromTimestamp($totalMinutos * 60)->format('H:i');
+
+        return $totalHoras;
+    }
+
+    public static function calcularTotalHorasParteDiario(Request $request, ConfiguracionUsuario $configuracion): string
+    {
+        $hora_de_entrada = $request->hora_de_entrada;
+        $hora_de_salida = $request->hora_de_salida;
+
+        if ($hora_de_entrada == null || $hora_de_salida == null) {
+            return null;
+        }
+
+        $horaEntrada = Carbon::createFromTimeString($hora_de_entrada);
+        $horaSalida = Carbon::createFromTimeString($hora_de_salida);
+        $totalMinutos = Carbon::parse($horaSalida)->diffInMinutes($horaEntrada);
+
+        if ($request->almuerzo) {
+            $totalMinutos -= $configuracion->getDescuento('descuento_almuerzo');
+        }
+        if($request->comida) {
+            $totalMinutos -= $configuracion->getDescuento('descuento_comida');
+        }
+        if($request->merienda) {
+            $totalMinutos -= $configuracion->getDescuento('descuento_merienda');
+        }
 
         $totalHoras = Carbon::createFromTimestamp($totalMinutos * 60)->format('H:i');
 

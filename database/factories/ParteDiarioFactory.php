@@ -17,9 +17,9 @@ $factory->define(ParteDiario::class, function (Faker $faker) {
         'HoraEntrada' => $horaEntrada,
         'HoraSalida' => $horaSalida,
         'TotalHoras' => Helper::calcularTotalHoras($horaEntrada,$horaSalida),
-        'almuerzo' => null,
-        'comida'  => null,
-        'merienda'  => null,
+        'almuerzo' => 0,
+        'comida'  => 0,
+        'merienda'  => 0,
 
     ];
 });

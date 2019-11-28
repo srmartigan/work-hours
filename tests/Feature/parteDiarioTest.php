@@ -30,6 +30,7 @@ class parteDiarioTest extends TestCase
     {
         $user = factory(User::class)->create();
         $this->actingAs($user);
+        $this->get('configuracion-usuario');
         $this->post('incluir-parte-diario', [
 
             'fecha' => new DateTime(),

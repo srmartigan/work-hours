@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\ConfiguracionUsuario;
 use App\Helper;
 use App\ParteDiario;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -49,10 +49,8 @@ class DocumentosController extends Controller
 
     public function calcularTotalPrecioNormal($totalHorasNormales)
     {
-        $precioHora = ConfiguracionUsuario::query()
-            ->where('userId', '=', Auth::id())->first();
-        //dd($precioHora);
-        return number_format($totalHorasNormales * $precioHora->precio_hora, 2);
+        $configuracion = User::find(Auth::id())->configuracion;
+        return number_format($totalHorasNormales * $configuracion->precio_hora, 2);
     }
 
     /**
@@ -76,6 +74,7 @@ class DocumentosController extends Controller
      */
     public function queryListadoPartesDiario(int $mes)
     {
+
         $listadoPartesDiario = ParteDiario::query()
             ->where('userId', '=', Auth::id())
             ->whereMonth('fecha', $mes)
