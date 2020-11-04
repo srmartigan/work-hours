@@ -19,7 +19,9 @@ class DocumentosController extends Controller
     public function index()
     {
         $mes = Helper::getMesActual();
-        $listadoPartesDiarios = $this->queryListadoPartesDiario($mes);
+        $year = Helper::getYearActual();
+
+        $listadoPartesDiarios = $this->queryListadoPartesDiario($mes, $year);
         $totalHorasNormales = Helper::sumarHorasNormales($listadoPartesDiarios);
         $total = $this->calcularTotalPrecioNormal($totalHorasNormales);
 
@@ -34,10 +36,11 @@ class DocumentosController extends Controller
     public function listarMes(Request $request)
     {
         $mes = (int)$request->mes;
+        $year = helper::getYearActual();
         if (!$this->validateMes($mes)) {
             return redirect('/documentos');
         }
-        $listadoPartesDiarios = $this->queryListadoPartesDiario($mes);
+        $listadoPartesDiarios = $this->queryListadoPartesDiario($mes, $year);
         $totalHorasNormales = Helper::sumarHorasNormales($listadoPartesDiarios);
         $total = $this->calcularTotalPrecioNormal($totalHorasNormales);
         return view('app.documentos')->with([
@@ -70,14 +73,16 @@ class DocumentosController extends Controller
 
     /**
      * @param int $mes
+     * @param int $year
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
-    public function queryListadoPartesDiario(int $mes)
+    public function queryListadoPartesDiario(int $mes , int $year)
     {
 
         $listadoPartesDiario = ParteDiario::query()
             ->where('userId', '=', Auth::id())
             ->whereMonth('fecha', $mes)
+            ->whereYear('fecha', $year)
             ->orderBy('fecha')
             ->paginate(31);
 

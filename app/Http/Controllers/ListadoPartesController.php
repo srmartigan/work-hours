@@ -19,10 +19,12 @@ class ListadoPartesController extends Controller
     {
         ParteDiario::clearBootedModels();
         $mesActual = Helper::getMesActual();
+        $year = Helper::getYearActual();
 
         $parteDiario = ParteDiario::query()
             ->where('userId','=',Auth::id())
             ->whereMonth('fecha',$mesActual)
+            ->whereYear('fecha',$year)
             ->orderBy('fecha')
             ->paginate(15);
 
@@ -39,9 +41,11 @@ class ListadoPartesController extends Controller
 
     function filtro(Request $request)
     {
+        $year = helper::getYearActual();
         $parteDiario = ParteDiario::query()
             ->where('userId','=',Auth::id())
             ->whereMonth('fecha',$request->filtroMes)
+            ->whereYear('fecha',$year)
             ->orderBy('fecha')
             ->paginate(15);
 

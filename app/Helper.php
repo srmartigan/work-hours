@@ -86,6 +86,14 @@ class helper
         return $mesActual;
     }
 
+    public static  function getYearActual():string
+    {
+        $fechaActual = new DateTime();
+        $yearActual = $fechaActual->format('yy');
+        return $yearActual;
+    }
+
+
     public static function sumarHorasNormales($listadoPartesDiarios)
     {
         $tiempo=0;

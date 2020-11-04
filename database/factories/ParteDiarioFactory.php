@@ -12,7 +12,7 @@ $factory->define(ParteDiario::class, function (Faker $faker) {
     $horaSalida = $faker->time('H:i' , '14:00');
 
     return [
-        'userId' => $faker->numberBetween(0,1),
+        'userId' => $faker->numberBetween(1,2),
         'fecha' => $faker->dateTimeInInterval('0 years','+ 30 days'),
         'HoraEntrada' => $horaEntrada,
         'HoraSalida' => $horaSalida,
