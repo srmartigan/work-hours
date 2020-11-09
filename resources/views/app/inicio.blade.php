@@ -3,13 +3,13 @@
 @section('contenido')
     @guest
         <div class="container">
-            <h1>Estamos en el HOME Sin registrar</h1>
+            <h1>Estamos en el HOME "Sin REgistrar ..."</h1>
             <a href="{{url('calendario')}}">ir a Calendario</a>
         </div>
     @else
         <div class="container">
-            <h1>Estamos en el HOME Logeados</h1>
-            <a href="{{url('calendario')}}">ir a Calendario</a>
+
+            <a href="{{url('calendario')}}">ir a  Calendario</a>
         </div>
     @endguest
 

@@ -16,9 +16,8 @@ use App\Http\Controllers\DocumentosController;
 use App\Http\Controllers\ListadoPartesController;
 use App\Http\Controllers\ParteDiarioController;
 
-Route::get('/', function () {
-    return view('app.inicio');
-});
+Route::get('/','InicioController@index');
+
 
 // Rutas Documentos
 Route::get('documentos','DocumentosController@index');

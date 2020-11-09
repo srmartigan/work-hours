@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use DateTime;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class helper
 {
@@ -110,5 +111,36 @@ class helper
         $horaTroceada = explode(':',$hora);
         $minutosTotales = ($horaTroceada[0] * 60) + $horaTroceada[1];
         return $minutosTotales;
+    }
+
+    public static function calcularTotalPrecioNormal($totalHorasNormales)
+    {
+        $configuracion = User::find(Auth::id())->configuracion;
+        return number_format($totalHorasNormales * $configuracion->precio_hora, 2);
+    }
+
+    public static function queryListadoPartesDiario(int $mes , int $year)
+    {
+
+        $listadoPartesDiario = ParteDiario::query()
+            ->where('userId', '=', Auth::id())
+            ->whereMonth('fecha', $mes)
+            ->whereYear('fecha', $year)
+            ->orderBy('fecha')
+            ->paginate(31);
+
+        Helper::dateFormatSpanish($listadoPartesDiario); // convert date "Y-m-d" to "d-m-Y"
+        return $listadoPartesDiario;
+    }
+
+    public static function validateMes(int $mes): bool
+    {
+        if (!is_int($mes)) {
+            return false;
+        }
+        if ($mes < 1 || $mes > 12) {
+            return false;
+        }
+        return true;
     }
 }
