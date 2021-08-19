@@ -17,3 +17,9 @@ Casos de Uso:
     -primer caso de uso
     -segundo caso de uso
     -.... etc casos de usos
+
+
+Git
+
+    Cambiar rama:
+    git checkout "nombre de la rama"  

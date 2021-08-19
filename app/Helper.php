@@ -6,13 +6,14 @@ namespace App;
 
 use Carbon\Carbon;
 use DateTime;
+use Firebase\JWT\JWT;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class helper
 {
-    public static function calcularTotalHoras(string $hora_de_entrada, string $hora_de_salida): string
+    public static function calcularTotalHoras(string $hora_de_entrada, string $hora_de_salida): ?string
     {
         if ($hora_de_entrada == null || $hora_de_salida == null) {
             return null;
@@ -27,8 +28,9 @@ class helper
         return $totalHoras;
     }
 
-    public static function calcularTotalHorasParteDiario(Request $request, ConfiguracionUsuario $configuracion): string
+    public static function calcularTotalHorasParteDiario( $request, ConfiguracionUsuario $configuracion): ?string
     {
+
         $hora_de_entrada = $request->hora_de_entrada;
         $hora_de_salida = $request->hora_de_salida;
 
@@ -90,7 +92,7 @@ class helper
     public static  function getYearActual():string
     {
         $fechaActual = new DateTime();
-        $yearActual = $fechaActual->format('yy');
+        $yearActual = "20".$fechaActual->format('y');
         return $yearActual;
     }
 
@@ -142,5 +144,33 @@ class helper
             return false;
         }
         return true;
+    }
+
+    public static function crearToken(User $user): string
+    {
+        $payload = array(
+            "id" => $user->id,
+            "email" => $user->email,
+            "rol" => "usuario",
+            "iat" => 1356999524,
+            "nbf" => 1357000000
+        );
+
+        return JWT::encode($payload, env('TOKEN_KEY'));
+    }
+
+    public static function autorizarToken($token): ?object
+    {
+        try {
+            $decoded = JWT::decode($token, env('TOKEN_KEY'), array('HS256'));
+
+            if (is_object($decoded) && isset($decoded->id) && isset($decoded->email)) {
+                return $decoded;
+            }
+        } catch (\UnexpectedValueException | \DomainException $e) {
+            return null;
+        }
+
+        return null;
     }
 }
