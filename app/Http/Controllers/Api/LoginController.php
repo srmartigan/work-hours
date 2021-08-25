@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\helper;
+use App\Helper;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
@@ -49,8 +49,9 @@ class LoginController extends Controller
 
         return response()->json([
             'token' => Helper::crearToken($user),
+            'id' => $user->id,
             'status' => 200,
-        ],200);
+        ]);
     }
 
     protected function validateLogin($datos): bool

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\helper;
+use App\Helper;
 use App\Http\Controllers\Controller;
 use App\ParteDiario;
 use App\User;

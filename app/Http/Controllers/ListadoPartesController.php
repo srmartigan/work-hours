@@ -41,7 +41,7 @@ class ListadoPartesController extends Controller
 
     function filtro(Request $request)
     {
-        $year = helper::getYearActual();
+        $year = Helper::getYearActual();
         $parteDiario = ParteDiario::query()
             ->where('userId','=',Auth::id())
             ->whereMonth('fecha',$request->filtroMes)

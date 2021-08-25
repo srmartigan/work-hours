@@ -36,7 +36,7 @@ class DocumentosController extends Controller
     public function listarMes(Request $request)
     {
         $mes = (int)$request->mes;
-        $year = helper::getYearActual();
+        $year = Helper::getYearActual();
         if (!Helper::validateMes($mes)) {
             return redirect('/documentos');
         }

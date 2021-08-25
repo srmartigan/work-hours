@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\helper;
+use App\Helper;
 use App\ParteDiario;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Livewire\Component;
@@ -18,11 +18,11 @@ class FiltroMeses extends Component
     {
 
         if ($this->mes == null){
-            $this->mes = helper::getMesActual();
+            $this->mes = Helper::getMesActual();
         }
-        $listadoPartesDiario = helper::queryListadoPartesDiario($this->mes, helper::getYearActual());
-        $totalHorasNormales = helper::sumarHorasNormales($listadoPartesDiario);
-        $total = helper::calcularTotalPrecioNormal($totalHorasNormales);
+        $listadoPartesDiario = Helper::queryListadoPartesDiario($this->mes, Helper::getYearActual());
+        $totalHorasNormales = Helper::sumarHorasNormales($listadoPartesDiario);
+        $total = Helper::calcularTotalPrecioNormal($totalHorasNormales);
 
         return view('livewire.filtro-meses')->with([
             'listadoPartesDiarios' => $listadoPartesDiario,

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\ListadoPartesController;
 use Illuminate\Http\Request;
 
 
@@ -24,5 +25,6 @@ use App\Http\Controllers\Api\RegisterController;
 //});
 
 Route::post('/parte_diario_add', [ParteDiarioController::class , 'incluir']);
+Route::post('/listado_partes' , [ListadoPartesController::class , 'ListadoPartes']);
 Route::post('/login', [LoginController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'index']);

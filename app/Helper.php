@@ -6,12 +6,14 @@ namespace App;
 
 use Carbon\Carbon;
 use DateTime;
+use DomainException;
 use Firebase\JWT\JWT;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use UnexpectedValueException;
 
-class helper
+class Helper
 {
     public static function calcularTotalHoras(string $hora_de_entrada, string $hora_de_salida): ?string
     {
@@ -23,9 +25,7 @@ class helper
         $horaSalida = Carbon::createFromTimeString($hora_de_salida);
         $totalMinutos = Carbon::parse($horaSalida)->diffInMinutes($horaEntrada);
 
-        $totalHoras = Carbon::createFromTimestamp($totalMinutos * 60)->format('H:i');
-
-        return $totalHoras;
+        return Carbon::createFromTimestamp($totalMinutos * 60)->format('H:i');
     }
 
     public static function calcularTotalHorasParteDiario( $request, ConfiguracionUsuario $configuracion): ?string
@@ -74,19 +74,17 @@ class helper
     public static function convertDateArray(String $fecha) : Array
     {
         $CarbonFecha = Carbon::createFromFormat('Y-m-d',$fecha);
-        $resultado = [
+        return [
             'dia' => $CarbonFecha->day,
             'mes' => $CarbonFecha->month,
             'year' => $CarbonFecha->year
         ];
-        return $resultado;
     }
 
     public static  function getMesActual():string
     {
         $fechaActual = new DateTime();
-        $mesActual = $fechaActual->format('m');
-        return $mesActual;
+        return $fechaActual->format('m');
     }
 
     public static  function getYearActual():string
@@ -97,7 +95,7 @@ class helper
     }
 
 
-    public static function sumarHorasNormales($listadoPartesDiarios)
+    public static function sumarHorasNormales($listadoPartesDiarios): string
     {
         $tiempo=0;
         foreach ($listadoPartesDiarios as $partesDiario){
@@ -111,17 +109,16 @@ class helper
     public static function convertirHoraEnMinutos(string $hora) : int {
 
         $horaTroceada = explode(':',$hora);
-        $minutosTotales = ($horaTroceada[0] * 60) + $horaTroceada[1];
-        return $minutosTotales;
+        return ((int)$horaTroceada[0] * 60) + (int)$horaTroceada[1];
     }
 
-    public static function calcularTotalPrecioNormal($totalHorasNormales)
+    public static function calcularTotalPrecioNormal($totalHorasNormales): string
     {
         $configuracion = User::find(Auth::id())->configuracion;
         return number_format($totalHorasNormales * $configuracion->precio_hora, 2);
     }
 
-    public static function queryListadoPartesDiario(int $mes , int $year)
+    public static function queryListadoPartesDiario(int $mes , int $year): LengthAwarePaginator
     {
 
         $listadoPartesDiario = ParteDiario::query()
@@ -167,7 +164,7 @@ class helper
             if (is_object($decoded) && isset($decoded->id) && isset($decoded->email)) {
                 return $decoded;
             }
-        } catch (\UnexpectedValueException | \DomainException $e) {
+        } catch (UnexpectedValueException | DomainException $e) {
             return null;
         }
 
