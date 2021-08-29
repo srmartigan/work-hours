@@ -24,7 +24,12 @@ use App\Http\Controllers\Api\RegisterController;
 //    return $request->user();
 //});
 
-Route::post('/parte_diario_add', [ParteDiarioController::class , 'incluir']);
-Route::post('/listado_partes' , [ListadoPartesController::class , 'ListadoPartes']);
-Route::post('/login', [LoginController::class, 'index']);
-Route::post('/register', [RegisterController::class, 'index']);
+Route::post('/parte_diario_add',         [ParteDiarioController  ::class, 'incluir'      ]);
+Route::post('/parte_diario_edit',        [ParteDiarioController  ::class, 'editar'       ]);
+Route::post('/parte_diario_delete/{id}', [ParteDiarioController  ::class, 'borrar'       ]);
+
+Route::post('/listado_partes',           [ListadoPartesController::class, 'ListadoPartes']);
+Route::post('/ver-parte/{id}',           [ListadoPartesController::class, 'verParte'     ]);
+
+Route::post('/login',                    [LoginController        ::class, 'index'        ]);
+Route::post('/register',                 [RegisterController     ::class, 'index'        ]);

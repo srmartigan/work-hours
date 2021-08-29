@@ -28,8 +28,8 @@ class ParteDiario extends Model
     {
         $this->userId = $userId;
         $this->fecha = date_create($datos->fecha);
-        $this->HoraEntrada = $datos->hora_de_entrada;
-        $this->HoraSalida = $datos->hora_de_salida;
+        $this->HoraEntrada = $datos->HoraEntrada;
+        $this->HoraSalida = $datos->HoraSalida;
         $this->almuerzo = $datos->almuerzo;
         $this->comida = $datos->comida;
         $this->merienda = $datos->merienda;
@@ -37,6 +37,22 @@ class ParteDiario extends Model
 
         return $this->save();
 
+
+    }
+
+    public function editarParte($datos)
+    {
+        $parte = ParteDiario::find($datos->id);
+
+        $parte->fecha = date_create($datos->fecha);
+        $parte->HoraEntrada = $datos->HoraEntrada;
+        $parte->HoraSalida = $datos->HoraSalida;
+        $parte->almuerzo = $datos->almuerzo;
+        $parte->comida = $datos->comida;
+        $parte->merienda = $datos->merienda;
+        $parte->TotalHoras = Helper::calcularTotalHorasParteDiario($datos, User::find($datos->userId)->configuracion);
+
+        $parte->save();
 
     }
 

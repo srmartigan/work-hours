@@ -31,8 +31,8 @@ class Helper
     public static function calcularTotalHorasParteDiario( $request, ConfiguracionUsuario $configuracion): ?string
     {
 
-        $hora_de_entrada = $request->hora_de_entrada;
-        $hora_de_salida = $request->hora_de_salida;
+        $hora_de_entrada = $request->HoraEntrada;
+        $hora_de_salida = $request->HoraSalida;
 
         if ($hora_de_entrada == null || $hora_de_salida == null) {
             return null;
