@@ -10,6 +10,7 @@ use DomainException;
 use Firebase\JWT\JWT;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use UnexpectedValueException;
 
@@ -118,6 +119,12 @@ class Helper
         return number_format($totalHorasNormales * $configuracion->precio_hora, 2);
     }
 
+    public static function calcularTotalPrecioNormalApi($totalHorasNormales, int $userId): string
+    {
+        $configuracion = User::find($userId)->configuracion;
+        return number_format($totalHorasNormales * $configuracion->precio_hora, 2);
+    }
+
     public static function queryListadoPartesDiario(int $mes , int $year): LengthAwarePaginator
     {
 
@@ -127,6 +134,21 @@ class Helper
             ->whereYear('fecha', $year)
             ->orderBy('fecha')
             ->paginate(31);
+
+        Helper::dateFormatSpanish($listadoPartesDiario); // convert date "Y-m-d" to "d-m-Y"
+        return $listadoPartesDiario;
+    }
+
+    public static function queryListadoPartesDiarioApi(int $mes , int $year, int $userId): Collection
+    {
+
+        $listadoPartesDiario = ParteDiario::query()
+            ->where('userId', '=', $userId)
+            ->whereMonth('fecha', $mes)
+            ->whereYear('fecha', $year)
+            ->orderBy('fecha')
+            ->get();
+
 
         Helper::dateFormatSpanish($listadoPartesDiario); // convert date "Y-m-d" to "d-m-Y"
         return $listadoPartesDiario;
@@ -170,4 +192,24 @@ class Helper
 
         return null;
     }
+
+    public static function validarToken($request): ?object
+    {
+        //Validar Toquen --------------------------
+        $token = $request->header('token');
+
+        $objectToken = Helper::autorizarToken($token);
+        if (is_null($objectToken) || !isset($objectToken->id)) {
+            return response()->json([
+                'status' => 'error',
+                'code' => '401',
+                'message' => 'error autorizacion'
+            ],401);
+        }
+        //fin validar Toquen-------------------------
+
+        return $objectToken;
+    }
+
+
 }

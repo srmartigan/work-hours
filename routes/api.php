@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\api\ListadoPartesController;
+use App\Http\Controllers\Api\HomeController;
+use App\Http\Controllers\Api\ListadoPartesController;
 use Illuminate\Http\Request;
 
 
@@ -23,6 +24,8 @@ use App\Http\Controllers\Api\RegisterController;
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
 //    return $request->user();
 //});
+
+Route::post('/home',                     [HomeController         ::class, 'home'      ]);
 
 Route::post('/parte_diario_add',         [ParteDiarioController  ::class, 'incluir'      ]);
 Route::post('/parte_diario_edit',        [ParteDiarioController  ::class, 'editar'       ]);

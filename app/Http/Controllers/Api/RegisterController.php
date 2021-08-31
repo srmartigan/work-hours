@@ -9,6 +9,9 @@ class RegisterController extends Controller
 {
     public function index(Request $request)
     {
+
+         //TODO: Cuando alguien se registre crearemos el usuario y su configuracion
+
         if (!isset($request->nombre) || !isset($request->email) || !isset($request->password)){
             return response(
                 $error = 'error faltan parametros',

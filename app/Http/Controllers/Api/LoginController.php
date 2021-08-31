@@ -44,7 +44,7 @@ class LoginController extends Controller
                 'error' => 'No existe ningun usuario con esos datos',
                 'status' => 400
             ], 400) ;
-        };
+        }
 
 
         return response()->json([
