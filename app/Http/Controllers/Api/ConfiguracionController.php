@@ -20,15 +20,15 @@ class ConfiguracionController extends Controller
                 'status' => 'error',
                 'code' => '401',
                 'message' => 'error autorizacion'
-            ],401);
+            ], 401);
         }
         //fin validar Toquen-------------------------
 
         $config = ConfiguracionUsuario::query()
-            ->where('userId','=',$objectToken->id)
+            ->where('userId', '=', $objectToken->id)
             ->get();
 
-        if ($config == null){
+        if ($config == null) {
             $config = new ConfiguracionUsuario();
             $config->userId = $objectToken->id;
             $config->descuento_almuerzo = 0;
@@ -41,7 +41,8 @@ class ConfiguracionController extends Controller
         }
 
         return response()->json([
-            'json' => $config,
+           'json' => $config,
+
         ], 200);
     }
 
@@ -50,7 +51,7 @@ class ConfiguracionController extends Controller
         $objectToken = Helper::validarToken($request);
 
         $config = ConfiguracionUsuario::query()
-            ->where('userId','=', $objectToken->id);
+            ->where('userId', '=', $objectToken->id);
 
         $config->update([
             'descuento_almuerzo' => $request->descuentoAlmuerzo,
