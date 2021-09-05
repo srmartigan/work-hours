@@ -48,21 +48,24 @@ class ConfiguracionController extends Controller
 
     function guardarConfiguracion(Request $request)
     {
+        $datos = json_decode($request->json);
+
         $objectToken = Helper::validarToken($request);
 
         $config = ConfiguracionUsuario::query()
             ->where('userId', '=', $objectToken->id);
 
         $config->update([
-            'descuento_almuerzo' => $request->descuentoAlmuerzo,
-            'descuento_comida' => $request->descuentoComida,
-            'descuento_merienda' => $request->descuentoMerienda,
-            'precio_hora' => $request->precioHora,
-            'precio_hora_estructurada' => $request->precioHoraEstructurada,
-            'precio_hora_extra' => $request->precioHoraExtra
+            'descuento_almuerzo' => $datos->descuentoAlmuerzo,
+            'descuento_comida' => $datos->descuentoComida,
+            'descuento_merienda' => $datos->descuentoMerienda,
+            'precio_hora' => $datos->precioHora,
+            'precio_hora_estructurada' => $datos->precioHoraEstructurada,
+            'precio_hora_extra' => $datos->precioHoraExtra
         ]);
 
         return response()->json([
+
             'status' => 'success'
         ]);
     }
