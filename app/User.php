@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Mockery\Exception;
 
 class User extends Authenticatable
 {
@@ -37,7 +38,25 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    static public function crearUsuario($nombre, $email, $password)
+    {
+        try {
+            $usuario = new User();
+            $usuario->name = $nombre;
+            $usuario->email = $email;
+            $usuario->password =  hash ('sha256' , $password);
+            $usuario->save();
+        }catch (Exception $e)
+        {
+            return response(
+                $error = 'error al crear el usuario',
+                $status = 400
+            );
+        }
 
+        return $usuario;
+
+    }
 
     public function configuracion()
     {
