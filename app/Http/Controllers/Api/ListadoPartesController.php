@@ -47,19 +47,20 @@ class ListadoPartesController extends Controller
         ]);
     }
 
-    function verParte(int $id, Request $request)
+    function verParte( $id, Request $request)
     {
 
         //Validar Toquen --------------------------
         $token = $request->header('token');
 
         $objectToken = Helper::autorizarToken($token);
+
         if (is_null($objectToken) || !isset($objectToken->id)) {
             return response()->json([
                 'status' => 'error',  //'success'
                 'code' => '401',
                 'message' => 'error autorizacion'
-            ]);
+            ],401);
         }
         //fin validar Toquen-------------------------
 

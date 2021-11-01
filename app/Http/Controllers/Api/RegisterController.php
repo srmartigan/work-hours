@@ -5,14 +5,14 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
     public function index(Request $request)
     {
 
-         //TODO: Cuando alguien se registre crearemos el usuario y su configuracion
-         //Falta crear la configuracion y comprobar que no se repiten los email
+         //TODO: Falta añadir que se cree la configuracion del usuario nuevo registrado
 
         $datos = json_decode($request->json);
 
@@ -23,14 +23,17 @@ class RegisterController extends Controller
             );
         }
 
-        $nombre = $datos->nombre;
-        $email = $datos->email;
-        $password = $datos->password;
+        if (!$this->validateLogin($datos)) {
+            return response()->json([
+                'error' => 'Fallo al validar argumentos',
+                'status' => 400
+            ], 400);
+        }
 
-        $usuario = User::crearUsuario($nombre, $email, $password);
+        $usuario = User::crearUsuario($datos);
 
         return response(
-            $contend = $usuario->name . ' ' . $usuario->email . ' ' . $usuario->password ,
+            $mensaje = 'Usuario registrado correctamente',
             $status = 200
         );
     }
@@ -40,6 +43,22 @@ class RegisterController extends Controller
         if (!isset($datos->nombre) || !isset($datos->email) || !isset($datos->password)){
             return false;
         }
+
+        return true;
+    }
+
+    protected function validateLogin($datos): bool
+    {
+        $validator = Validator::make((array)$datos, [
+            'nombre' => 'required',
+            'email' => 'required | unique:users',
+            'password' => 'required | between:4,12',
+        ]);
+
+        if ($validator->fails()) {
+            return false;
+        }
+
         return true;
     }
 }

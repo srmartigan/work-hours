@@ -45,7 +45,7 @@ class LoginController extends Controller
             ])->firstOrFail();
 
         } catch (\Exception $e) {
-            return "Error producido:" + $e;
+            return "Error producido:" . $e;
         }
 
         if ($user == null) {

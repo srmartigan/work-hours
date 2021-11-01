@@ -38,18 +38,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    static public function crearUsuario($nombre, $email, $password)
+    /*
+     * Creamos un usuario con los datos siguientes...
+     *      $datos->nombre ,
+     *      $datos->email ,
+     *      $datos->password
+     */
+        static public function crearUsuario($datos)
     {
         try {
             $usuario = new User();
-            $usuario->name = $nombre;
-            $usuario->email = $email;
-            $usuario->password =  hash ('sha256' , $password);
+            $usuario->name = $datos->nombre;
+            $usuario->email = $datos->email;
+            $usuario->password =  hash ('sha256' , $datos->password);
             $usuario->save();
         }catch (Exception $e)
         {
             return response(
-                $error = 'error al crear el usuario',
+                $error = 'error al crear el usuario -> ' . $e,
                 $status = 400
             );
         }
