@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+
 class LoginController extends Controller
 {
     /*
@@ -15,35 +16,43 @@ class LoginController extends Controller
      */
     public function index(Request $request)
     {
+
         $datos = json_decode($request->json);
+
 
         if (!isset($datos->email) || !isset($datos->password)) {
             return response()->json([
                 'error' => 'Faltan argumentos',
                 'status' => 400
-            ],400);
+            ], 400);
         }
 
         if (!$this->validateLogin($datos)) {
             return response()->json([
                 'error' => 'Fallo al validar argumentos',
                 'status' => 400
-            ],400);
+            ], 400);
         }
 
-        $email = $datos->email;
-        $password = hash('sha256', $datos->password);
 
-        $user = User::query()->where([
-            'email' => $email,
-            'password' => $password
-        ])->first();
+        try {
+            $email = $datos->email;
+            $password = hash('sha256', $datos->password);
+
+            $user = User::query()->where([
+                'email' => $email,
+                'password' => $password
+            ])->firstOrFail();
+
+        } catch (\Exception $e) {
+            return "Error producido:" + $e;
+        }
 
         if ($user == null) {
             return response()->json([
                 'error' => 'No existe ningun usuario con esos datos',
                 'status' => 400
-            ], 400) ;
+            ], 400);
         }
 
 
@@ -56,7 +65,7 @@ class LoginController extends Controller
 
     protected function validateLogin($datos): bool
     {
-        $validator = Validator::make((array) $datos, [
+        $validator = Validator::make((array)$datos, [
             'email' => 'required | email:rfc,dns',
             'password' => 'required | between:4,12',
         ]);
