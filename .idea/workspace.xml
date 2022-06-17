@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Esqueleto basico de la app">
+    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="preparando proyecto para actualizar a LARAVEL 9">
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/work-hours.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/work-hours.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DocumentosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DocumentosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ParteDiarioFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ParteDiarioFactory.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,9 +19,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -53,9 +51,6 @@
     </expand>
     <select />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="work-hours" />
-  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -64,23 +59,31 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ListadoPartesController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ParteDiarioController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/routes/api.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
@@ -102,11 +105,9 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
       <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
@@ -120,10 +121,7 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
-      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
-      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
@@ -138,24 +136,17 @@
       <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
-      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
-      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
-      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/league/flysystem" />
-      <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
-      <path value="$PROJECT_DIR$/vendor/styde/html" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
@@ -163,41 +154,67 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/vendor/league/config" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/vendor/spatie/ignition" />
+      <path value="$PROJECT_DIR$/vendor/spatie/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-ignition" />
+      <path value="$PROJECT_DIR$/vendor/spatie/backtrace" />
     </include_path>
   </component>
   <component name="ProjectId" id="1SeqIvN9g2Fo2tz9Os5DHDWicNs" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Pagination/LengthAwarePaginator.php&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Routing/Controller.php&#10;D:/wamp64/www/work-hours/Roadmap.md&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php&#10;D:/wamp64/www/work-hours/.env" />
-    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/workhours/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\wamp64\www\work-hours\resources\views\layouts" />
-      <recent name="D:\wamp64\www\work-hours" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\laragon\www\work-hours" />
       <recent name="D:\wamp64\www\work-hours\tests\Unit" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\work-hours\resources\views\layouts" />
+      <recent name="D:\wamp64\www\work-hours" />
+    </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="HelperTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -234,7 +251,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="1" Folder0="D:\wamp64\www\work-hours" CustomDictionaries="1" CustomDictionary0="D:\wamp64\www\work-hours\spanish.dic" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="1" Folder0="D:\wamp64\www\work-hours" CustomDictionaries="1" CustomDictionary0="D:\wamp64\www\work-hours\spanish.dic" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
   </component>
@@ -259,12 +276,95 @@
       <workItem from="1573682481544" duration="28880000" />
       <workItem from="1573945752228" duration="136163000" />
       <workItem from="1574959497327" duration="2077000" />
-      <workItem from="1604488811433" duration="1985000" />
+      <workItem from="1604488811433" duration="4311000" />
+      <workItem from="1604915421307" duration="25659000" />
+      <workItem from="1605251598292" duration="696000" />
+      <workItem from="1605447840871" duration="151000" />
+      <workItem from="1618416436373" duration="7088000" />
+      <workItem from="1618468363510" duration="74000" />
+      <workItem from="1618468451471" duration="3013000" />
+      <workItem from="1618780817573" duration="25573000" />
+      <workItem from="1618928132298" duration="1877000" />
+      <workItem from="1618932649673" duration="13260000" />
+      <workItem from="1619426786897" duration="528000" />
+      <workItem from="1629581808050" duration="4169000" />
+      <workItem from="1629665967744" duration="5000" />
+      <workItem from="1629668501944" duration="27000" />
+      <workItem from="1629668583763" duration="1261000" />
+      <workItem from="1629672381877" duration="839000" />
+      <workItem from="1629748216983" duration="5547000" />
+      <workItem from="1630096705262" duration="49000" />
+      <workItem from="1630162383158" duration="1264000" />
+      <workItem from="1630164038586" duration="13787000" />
+      <workItem from="1630276066924" duration="31000" />
+      <workItem from="1630342737368" duration="3554000" />
+      <workItem from="1630346813556" duration="7602000" />
+      <workItem from="1630620712212" duration="2764000" />
+      <workItem from="1631030873165" duration="316000" />
+      <workItem from="1631123502726" duration="4987000" />
+      <workItem from="1631215370490" duration="644000" />
+      <workItem from="1631476973540" duration="3503000" />
+      <workItem from="1634465205864" duration="1220000" />
+      <workItem from="1635627133328" duration="653000" />
+      <workItem from="1635681205736" duration="3000" />
+      <workItem from="1635682189676" duration="7000" />
+      <workItem from="1635703638199" duration="5000" />
+      <workItem from="1635703812639" duration="14000" />
+      <workItem from="1635762306314" duration="931000" />
+      <workItem from="1635801473249" duration="2435000" />
+      <workItem from="1655469070177" duration="3587000" />
+      <workItem from="1655472689331" duration="4569000" />
     </task>
+    <task id="LOCAL-00001" summary="Añadiendo a la api verConfiguracion y guardarConfiguracion">
+      <created>1630439461721</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630439461721</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Añadiendo rutas para acceder a la configuracion">
+      <created>1630439973509</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630439973509</updated>
+    </task>
+    <task id="LOCAL-00003" summary="UPDATE LARAVEL 7.0 todo funcionando.">
+      <created>1655469299319</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655469299319</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Preparando rama para actualizar LARAVEL ver 8.">
+      <created>1655469820323</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655469820323</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Actualizado proyecto a LARAVEL 8">
+      <created>1655471803417</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655471803417</updated>
+    </task>
+    <task id="LOCAL-00006" summary="preparando proyecto para actualizar a LARAVEL 9">
+      <created>1655472224079</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655472224079</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="startingDirectory" value="C:\Program Files\Git\bin" />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -272,7 +372,17 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="COLUMN_ORDER" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/work-hours-1.1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
             </State>
           </value>
         </entry>
@@ -280,15 +390,22 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Esqueleto basico de la app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Esqueleto basico de la app" />
+    <MESSAGE value="Añadiendo a la api verConfiguracion y guardarConfiguracion" />
+    <MESSAGE value="Añadiendo rutas para acceder a la configuracion" />
+    <MESSAGE value="UPDATE LARAVEL 7.0 todo funcionando." />
+    <MESSAGE value="Preparando rama para actualizar LARAVEL ver 8." />
+    <MESSAGE value="Actualizado proyecto a LARAVEL 8" />
+    <MESSAGE value="preparando proyecto para actualizar a LARAVEL 9" />
+    <option name="LAST_COMMIT_MESSAGE" value="preparando proyecto para actualizar a LARAVEL 9" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/work_hours@RutasVistasAppTest_testRutaDocumentos.xml" NAME="RutasVistasAppTest.testRutaDocumentos Coverage Results" MODIFIED="1574861739060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/work_hours@ExampleTest_testBasicTest__1_.xml" NAME="ExampleTest.testBasicTest (1) Coverage Results" MODIFIED="1572269904724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/work_hours@RutasVistasAppTest_testRutaDocumentos.xml" NAME="RutasVistasAppTest.testRutaDocumentos Coverage Results" MODIFIED="1574861739060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
