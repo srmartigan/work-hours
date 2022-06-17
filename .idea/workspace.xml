@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Añadiendo rutas para acceder a la configuracion">
-      <change afterPath="$PROJECT_DIR$/%SystemDrive%/ProgramData/Microsoft/Windows/Caches/cversions.2.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/%SystemDrive%/ProgramData/Microsoft/Windows/Caches/{42BE9487-02D3-447D-B0E8-BBC05C716AEA}.2.ver0x0000000000000001.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/%SystemDrive%/ProgramData/Microsoft/Windows/Caches/{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000001.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/%SystemDrive%/ProgramData/Microsoft/Windows/Caches/{AF30F639-333D-4673-A6A3-677CDCE68241}.2.ver0x0000000000000001.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/%SystemDrive%/ProgramData/Microsoft/Windows/Caches/{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000001.db" afterDir="false" />
+    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="UPDATE LARAVEL 7.0 todo funcionando.">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/work-hours.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/work-hours.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ListadoPartesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ListadoPartesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +48,6 @@
     </expand>
     <select />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="work-hours" />
-  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -67,11 +57,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ListadoPartesController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ParteDiarioController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/routes/api.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -178,6 +172,7 @@
       <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
     </include_path>
   </component>
   <component name="ProjectId" id="1SeqIvN9g2Fo2tz9Os5DHDWicNs" />
@@ -188,24 +183,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Pagination/LengthAwarePaginator.php&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Routing/Controller.php&#10;D:/wamp64/www/work-hours/Roadmap.md&#10;D:/wamp64/www/work-hours/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php&#10;D:/wamp64/www/work-hours/.env" />
-    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/laragon/www/workhours/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\laragon\www\work-hours" />
@@ -312,6 +302,7 @@
       <workItem from="1635703812639" duration="14000" />
       <workItem from="1635762306314" duration="931000" />
       <workItem from="1635801473249" duration="2435000" />
+      <workItem from="1655469070177" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="Añadiendo a la api verConfiguracion y guardarConfiguracion">
       <created>1630439461721</created>
@@ -327,8 +318,18 @@
       <option name="project" value="LOCAL" />
       <updated>1630439973509</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="UPDATE LARAVEL 7.0 todo funcionando.">
+      <created>1655469299319</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655469299319</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="startingDirectory" value="C:\Program Files\Git\bin" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -355,21 +356,21 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Esqueleto basico de la app" />
     <MESSAGE value="Añadiendo a la api verConfiguracion y guardarConfiguracion" />
     <MESSAGE value="Añadiendo rutas para acceder a la configuracion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadiendo rutas para acceder a la configuracion" />
+    <MESSAGE value="UPDATE LARAVEL 7.0 todo funcionando." />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE LARAVEL 7.0 todo funcionando." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/work_hours@RutasVistasAppTest_testRutaDocumentos.xml" NAME="RutasVistasAppTest.testRutaDocumentos Coverage Results" MODIFIED="1574861739060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/work_hours@ExampleTest_testBasicTest__1_.xml" NAME="ExampleTest.testBasicTest (1) Coverage Results" MODIFIED="1572269904724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/work_hours@RutasVistasAppTest_testRutaDocumentos.xml" NAME="RutasVistasAppTest.testRutaDocumentos Coverage Results" MODIFIED="1574861739060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
