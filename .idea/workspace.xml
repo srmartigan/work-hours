@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Preparando rama para actualizar LARAVEL ver 8.">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/work-hours.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/work-hours.iml" afterDir="false" />
+    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Actualizado proyecto a LARAVEL 8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,7 +308,7 @@
       <workItem from="1635703812639" duration="14000" />
       <workItem from="1635762306314" duration="931000" />
       <workItem from="1635801473249" duration="2435000" />
-      <workItem from="1655469070177" duration="2535000" />
+      <workItem from="1655469070177" duration="3103000" />
     </task>
     <task id="LOCAL-00001" summary="Añadiendo a la api verConfiguracion y guardarConfiguracion">
       <created>1630439461721</created>
@@ -342,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655469820323</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Actualizado proyecto a LARAVEL 8">
+      <created>1655471803417</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655471803417</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -381,7 +384,8 @@
     <MESSAGE value="Añadiendo rutas para acceder a la configuracion" />
     <MESSAGE value="UPDATE LARAVEL 7.0 todo funcionando." />
     <MESSAGE value="Preparando rama para actualizar LARAVEL ver 8." />
-    <option name="LAST_COMMIT_MESSAGE" value="Preparando rama para actualizar LARAVEL ver 8." />
+    <MESSAGE value="Actualizado proyecto a LARAVEL 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizado proyecto a LARAVEL 8" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
