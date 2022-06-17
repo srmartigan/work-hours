@@ -13,7 +13,7 @@ $factory->define(ParteDiario::class, function (Faker $faker) {
 
     return [
         'userId' => $faker->numberBetween(1,2),
-        'fecha' => $faker->dateTimeInInterval('0 years','+ 30 days'),
+        'fecha' => $faker->dateTimeInInterval('0 years','- 360 days'),
         'HoraEntrada' => $horaEntrada,
         'HoraSalida' => $horaSalida,
         'TotalHoras' => Helper::calcularTotalHoras($horaEntrada,$horaSalida),
