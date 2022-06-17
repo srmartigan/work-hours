@@ -19,7 +19,7 @@ class LoginController extends Controller
 
         $datos = json_decode($request->json);
 
-
+        //TODO: Comprobar error cuando el password no es correcto...
         if (!isset($datos->email) || !isset($datos->password)) {
             return response()->json([
                 'error' => 'Faltan argumentos',

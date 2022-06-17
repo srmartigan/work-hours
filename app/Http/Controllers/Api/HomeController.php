@@ -10,6 +10,8 @@ class HomeController extends Controller
 {
     public function home(Request $request)
     {
+
+
         //Validar Toquen --------------------------
         $token = $request->header('token');
 
@@ -22,7 +24,7 @@ class HomeController extends Controller
             ],401);
         }
         //fin validar Toquen-------------------------
-
+var_dump("esoty aqui");
         $listadoPartesDiario = Helper::queryListadoPartesDiarioApi(
             Helper::getMesActual(),
             Helper::getYearActual(),
