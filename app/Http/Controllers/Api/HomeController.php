@@ -24,7 +24,7 @@ class HomeController extends Controller
             ],401);
         }
         //fin validar Toquen-------------------------
-var_dump("esoty aqui");
+var_dump("esoty aqui en master");
         $listadoPartesDiario = Helper::queryListadoPartesDiarioApi(
             Helper::getMesActual(),
             Helper::getYearActual(),
