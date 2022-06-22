@@ -3,9 +3,10 @@
 namespace Src\WorkHours\User\Application;
 
 use Src\WorkHours\User\Domain\Contracts\UserRepositoryContract;
+use Src\Workhours\User\Domain\User;
 use Src\Workhours\User\Domain\ValueObjects\UserId;
 
-class FindUserByIdUseCase
+final class FindUserByIdUseCase
 {
     private UserRepositoryContract $repository;
 
@@ -14,10 +15,10 @@ class FindUserByIdUseCase
         $this->repository = $repository;
     }
 
-    public function __invoke(int $userId): void
+    public function __invoke(int $userId): ?User
     {
-        $id = new UserId($userId);
-        $this->repository->findById($id);
+        return $this->repository->findById(new UserId($userId));
+
     }
 }
 

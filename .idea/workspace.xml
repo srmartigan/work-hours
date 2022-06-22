@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Ver 1.5 add DDD&#10;Reordenando Tests">
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Application/GetUserUseCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Application/FindUserByIdUseCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Domain/Contracts/UserRepositoryContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/Contracts/UserRepositoryContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/User/Domain/Contracts/UserRepositoryContractFake.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/User/Domain/Contracts/UserRepositoryContractFake.php" afterDir="false" />
+    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Creando test para FindUserByIdUseCase">
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Application/FindUserByIdUseCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Application/FindUserByIdUseCase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,24 +234,24 @@
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
-    <configuration name="CreateUserUseCaseTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\User\Application\CreateUserUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/CreateUserUseCaseTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
     <configuration name="DeleteUserUseCaseTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\User\Application\DeleteUserUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/DeleteUserUseCaseTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="UserApplicationTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\UserApplicationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/UserApplicationTest.php" scope="Class" />
+    <configuration name="FindUserByIdUseCaseTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\WorkHours\User\Application\FindUserByIdUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/WorkHours/User/Application/FindUserByIdUseCaseTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="UserApplicationTest.testDeleteUserSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\UserApplicationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/UserApplicationTest.php" method="testDeleteUserSuccess" scope="Method" />
+    <configuration name="FindUserByIdUseCaseTest.testFindUserByIdUseCaseFail" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\WorkHours\User\Application\FindUserByIdUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/WorkHours/User/Application/FindUserByIdUseCaseTest.php" method="testFindUserByIdUseCaseFail" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\User\Domain\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Domain/UserTest.php" scope="Class" />
+    <configuration name="FindUserByIdUseCaseTest.testFindUserByIdUseCaseSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\WorkHours\User\Application\FindUserByIdUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/WorkHours/User/Application/FindUserByIdUseCaseTest.php" method="testFindUserByIdUseCaseSuccess" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FindUserByIdUseCaseTest.test_it_should_return_null_if_user_not_found" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\WorkHours\User\Application\FindUserByIdUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/WorkHours/User/Application/FindUserByIdUseCaseTest.php" method="test_it_should_return_null_if_user_not_found" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -262,11 +260,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.FindUserByIdUseCaseTest" />
+        <item itemvalue="PHPUnit.FindUserByIdUseCaseTest.testFindUserByIdUseCaseFail" />
+        <item itemvalue="PHPUnit.FindUserByIdUseCaseTest.testFindUserByIdUseCaseSuccess" />
+        <item itemvalue="PHPUnit.FindUserByIdUseCaseTest.test_it_should_return_null_if_user_not_found" />
         <item itemvalue="PHPUnit.DeleteUserUseCaseTest" />
-        <item itemvalue="PHPUnit.CreateUserUseCaseTest" />
-        <item itemvalue="PHPUnit.UserTest" />
-        <item itemvalue="PHPUnit.UserApplicationTest" />
-        <item itemvalue="PHPUnit.UserApplicationTest.testDeleteUserSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -301,7 +299,7 @@
       <workItem from="1655745190090" duration="20000" />
       <workItem from="1655745224212" duration="16014000" />
       <workItem from="1655830027519" duration="105000" />
-      <workItem from="1655914102161" duration="3367000" />
+      <workItem from="1655914102161" duration="8449000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
@@ -331,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655916864926</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Creando caso de uso: FindUserByIdUseCase">
+      <created>1655917613570</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655917613570</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Creando test para FindUserByIdUseCase">
+      <created>1655938376981</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655938376981</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +367,9 @@
     <MESSAGE value="inicio branch Ver 1.5 con LARAVEL 9" />
     <MESSAGE value="Ver 1.5 add DDD&#10;&#10;Añadido el Dominio de User..." />
     <MESSAGE value="Ver 1.5 add DDD&#10;Reordenando Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver 1.5 add DDD&#10;Reordenando Tests" />
+    <MESSAGE value="Creando caso de uso: FindUserByIdUseCase" />
+    <MESSAGE value="Creando test para FindUserByIdUseCase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creando test para FindUserByIdUseCase" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

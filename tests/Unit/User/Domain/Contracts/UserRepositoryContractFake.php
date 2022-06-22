@@ -24,21 +24,16 @@ class UserRepositoryContractFake implements UserRepositoryContract
 
     public function findById(UserId $id): ?User
     {
-        return null;
-    }
-
-    public function find(UserId $id): ?User
-    {
-        // Si existe el usuario con el id, lo retorna
         if ($id->value() == 1) {
             return new User(
                 new UserEmail('user@mail.com'),
                 new UserPassword('password'),
-                new UserToken('token')
+                new UserToken('token'),
             );
         }
-        return null;
+        throw new \InvalidArgumentException('User not found');
     }
+
 
     public function findByCriteria(UserEmail $userEmail): ?User
     {
@@ -46,7 +41,8 @@ class UserRepositoryContractFake implements UserRepositoryContract
     }
 
     public function update(UserId $userId, User $user): void
-    {}
+    {
+    }
 
     public function delete(UserId $id): void
     {

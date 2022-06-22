@@ -10,8 +10,6 @@ use Src\Workhours\User\Domain\ValueObjects\UserId;
 
 interface UserRepositoryContract
 {
-    public function find(UserId $id): ?User;
-
     public function findByCriteria(UserEmail $userEmail): ?User;
 
     public function findById(UserId $id): ?User;
