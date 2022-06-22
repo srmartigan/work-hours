@@ -8,13 +8,13 @@ use InvalidArgumentException;
 
 final class UserToken
 {
-    private string $value;
+    private ?string $value;
 
     /**
      * UserToken constructor.
      * @param string|null $token
      */
-    public function __construct(?string $token)
+    public function __construct(string $token=null)
     {
         $this->value = $token;
     }

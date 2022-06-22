@@ -5,29 +5,22 @@ declare(strict_types=1);
 namespace Src\Workhours\User\Domain;
 
 use Src\Workhours\User\Domain\ValueObjects\UserEmail;
-use Src\Workhours\User\Domain\ValueObjects\UserId;
 use Src\Workhours\User\Domain\ValueObjects\UserPassword;
 use Src\Workhours\User\Domain\ValueObjects\UserToken;
 
 
 class User
 {
-    private UserId $id; // UserId
     private UserEmail $email; // UserEmail
     private UserPassword $password; // UserPassword
     private UserToken $token; // UserToken
 
-    public function __construct(UserId $id, UserEmail $email, UserPassword $password, UserToken $token)
+    public function __construct(UserEmail $email, UserPassword $password, UserToken $token=null)
     {
-        $this->id        = $id;
         $this->email     = $email;
         $this->password  = $password;
-        $this->token     = $token;
-    }
+        $this->token     = $token ?? new UserToken(null);
 
-    public function id(): UserId
-    {
-        return $this->id;
     }
 
     public function email(): UserEmail
@@ -40,18 +33,20 @@ class User
         return $this->password;
     }
 
-    public function token(): UserToken
+    public function token(): ?UserToken
     {
+        if(is_null($this->token)){
+            return null;
+        }
         return $this->token;
     }
 
     public static function create(
-        UserId $id,
         UserEmail $email,
         UserPassword $password,
-        UserToken $token
+        ?UserToken $token
     ): User
     {
-        return new self($id, $email, $password, $token);
+        return new self($email, $password, $token);
     }
 }

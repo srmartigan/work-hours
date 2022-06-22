@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\BoundedContext\User\Domain\Contracts;
+namespace Src\WorkHours\User\Domain\Contracts;
 
 use Src\Workhours\User\Domain\User;
 use Src\Workhours\User\Domain\ValueObjects\UserEmail;

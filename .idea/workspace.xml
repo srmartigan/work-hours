@@ -4,19 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="inicio branch Ver 1.5 con LARAVEL 9">
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/Contracts/UserRepositoryContract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/ValueObjects/UserEmail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/ValueObjects/UserId.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/ValueObjects/UserPassword.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/ValueObjects/UserToken.php" afterDir="false" />
+    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Ver 1.5 add DDD&#10;&#10;Añadido el Dominio de User...">
+      <change afterPath="$PROJECT_DIR$/src/WorkHours/User/Application/CreateUserUseCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorkHours/User/Application/DeleteUserUseCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorkHours/User/Application/GetUserUseCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorkHours/User/Application/UpdateUserUseCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/User/Application/CreateUserUseCaseTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/User/Application/DeleteUserUseCaseTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/User/Application/UserApplicationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/User/Domain/Contracts/UserRepositoryContractFake.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/User/Domain/Exception/ExceptionSuccess.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/User/Domain/UserTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/work-hours.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/work-hours.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Domain/Contracts/UserRepositoryContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/Contracts/UserRepositoryContract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Domain/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Domain/ValueObjects/UserToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/ValueObjects/UserToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ControladorParteDiarioTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +76,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/routes/api.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/WorkHours/User/Application/DeleteUserUseCase.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/WorkHours/User/Application/GetUserUseCase.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/WorkHours/User/Application/UpdateUserUseCase.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/WorkHours/User/Domain/Contracts/UserRepositoryContract.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/WorkHours/User/Domain/ValueObjects/UserId.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/Unit/User/Application/UserApplicationTest.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,7 +89,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
@@ -211,20 +225,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/workhours/backend/src/WorkHours&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit",
+    "last_opened_file_path": "C:/laragon/www/workhours/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\workhours\backend\src\WorkHours" />
@@ -232,29 +248,30 @@
       <recent name="D:\wamp64\www\work-hours\tests\Unit" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\workhours\backend\tests\Unit\User\Application" />
       <recent name="D:\wamp64\www\work-hours\resources\views\layouts" />
       <recent name="D:\wamp64\www\work-hours" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
-    <configuration name="HelperTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\HelperTest" file="$PROJECT_DIR$/tests/Unit/HelperTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.DeleteUserUseCaseTest">
+    <configuration name="CreateUserUseCaseTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\User\Application\CreateUserUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/CreateUserUseCaseTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="RutasVistasAppTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RutasVistasAppTest" file="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" scope="Class" />
+    <configuration name="DeleteUserUseCaseTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\User\Application\DeleteUserUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/DeleteUserUseCaseTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="RutasVistasAppTest.testRutaDocumentos" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RutasVistasAppTest" file="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" method="testRutaDocumentos" scope="Method" />
+    <configuration name="UserApplicationTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\UserApplicationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/UserApplicationTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="RutasVistasAppTest.testRutaListadoPartes" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RutasVistasAppTest" file="$PROJECT_DIR$/tests/Feature/RutasVistasAppTest.php" method="testRutaListadoPartes" scope="Method" />
+    <configuration name="UserApplicationTest.testDeleteUserSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\UserApplicationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/UserApplicationTest.php" method="testDeleteUserSuccess" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="parteDiarioTest.testCreateParteDiario" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\parteDiarioTest" file="$PROJECT_DIR$/tests/Feature/parteDiarioTest.php" method="testCreateParteDiario" scope="Method" />
+    <configuration name="UserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\User\Domain\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Domain/UserTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -263,11 +280,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.parteDiarioTest.testCreateParteDiario" />
-        <item itemvalue="PHPUnit.RutasVistasAppTest.testRutaListadoPartes" />
-        <item itemvalue="PHPUnit.RutasVistasAppTest.testRutaDocumentos" />
-        <item itemvalue="PHPUnit.RutasVistasAppTest" />
-        <item itemvalue="PHPUnit.HelperTest" />
+        <item itemvalue="PHPUnit.DeleteUserUseCaseTest" />
+        <item itemvalue="PHPUnit.CreateUserUseCaseTest" />
+        <item itemvalue="PHPUnit.UserTest" />
+        <item itemvalue="PHPUnit.UserApplicationTest" />
+        <item itemvalue="PHPUnit.UserApplicationTest.testDeleteUserSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +315,11 @@
       <workItem from="1574959497327" duration="2077000" />
       <workItem from="1604488811433" duration="1985000" />
       <workItem from="1655568712670" duration="3620000" />
-      <workItem from="1655629646497" duration="3695000" />
+      <workItem from="1655629646497" duration="5462000" />
+      <workItem from="1655745190090" duration="20000" />
+      <workItem from="1655745224212" duration="16014000" />
+      <workItem from="1655830027519" duration="105000" />
+      <workItem from="1655914102161" duration="2257000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
@@ -314,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655486683171</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ver 1.5 add DDD&#10;&#10;Añadido el Dominio de User...">
+      <created>1655633614586</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655633614586</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,19 +353,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="work-hours-1.5" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -348,13 +364,15 @@
     <MESSAGE value="UPDATE Ver 1.3 con LARAVEL 9" />
     <MESSAGE value="inicio branch Ver 1.4 con LARAVEL 9" />
     <MESSAGE value="inicio branch Ver 1.5 con LARAVEL 9" />
-    <option name="LAST_COMMIT_MESSAGE" value="inicio branch Ver 1.5 con LARAVEL 9" />
+    <MESSAGE value="Ver 1.5 add DDD&#10;&#10;Añadido el Dominio de User..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver 1.5 add DDD&#10;&#10;Añadido el Dominio de User..." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/backend@TestUserDomain_testUserId.xml" NAME="TestUserDomain.testUserId Coverage Results" MODIFIED="1655747083549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/work_hours@ExampleTest_testBasicTest__1_.xml" NAME="ExampleTest.testBasicTest (1) Coverage Results" MODIFIED="1572269904724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/work_hours@RutasVistasAppTest_testRutaDocumentos.xml" NAME="RutasVistasAppTest.testRutaDocumentos Coverage Results" MODIFIED="1574861739060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
