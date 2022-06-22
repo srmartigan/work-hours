@@ -22,6 +22,10 @@ class UserRepositoryContractFake implements UserRepositoryContract
         }
     }
 
+    public function findById(UserId $id): ?User
+    {
+        return null;
+    }
 
     public function find(UserId $id): ?User
     {

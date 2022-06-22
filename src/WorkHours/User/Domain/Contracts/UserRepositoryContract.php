@@ -14,6 +14,8 @@ interface UserRepositoryContract
 
     public function findByCriteria(UserEmail $userEmail): ?User;
 
+    public function findById(UserId $id): ?User;
+
     public function save(User $user): void;
 
     public function update(UserId $userId, User $user): void;
