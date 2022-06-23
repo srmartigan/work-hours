@@ -11,9 +11,14 @@ final class DeleteUserUseCase
 {
     private UserRepositoryContract $repository;
 
-    public function __construct(UserRepositoryContract $repository)
+    private function __construct(UserRepositoryContract $repository)
     {
         $this->repository = $repository;
+    }
+
+    public static function create(UserRepositoryContract $repository): self
+    {
+        return new self($repository);
     }
 
     public function __invoke(int $userId): void

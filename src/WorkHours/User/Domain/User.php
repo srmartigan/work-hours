@@ -23,6 +23,11 @@ class User
 
     }
 
+    public static function create(UserEmail $email,UserPassword $password,?UserToken $token): self
+    {
+        return new self($email, $password, $token);
+    }
+
     public function email(): UserEmail
     {
         return $this->email;
@@ -39,14 +44,5 @@ class User
             return null;
         }
         return $this->token;
-    }
-
-    public static function create(
-        UserEmail $email,
-        UserPassword $password,
-        ?UserToken $token
-    ): User
-    {
-        return new self($email, $password, $token);
     }
 }

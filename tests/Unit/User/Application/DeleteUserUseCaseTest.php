@@ -14,15 +14,15 @@ class DeleteUserUseCaseTest extends TestCase
     {
         $this->expectException(\InvalidArgumentException::class);
 
-        $deleteUser = new DeleteUserUseCase(new UserRepositoryContractFake());
-        $deleteUser->__invoke(0);
+        $deleteUser = DeleteUserUseCase::create(new UserRepositoryContractFake());
+        $deleteUser(0);
     }
 
     public function testDeleteUserSuccess()
     {
         $this->expectException(ExceptionSuccess::class);
 
-        $deleteUser = new DeleteUserUseCase(new UserRepositoryContractFake());
-        $deleteUser->__invoke(1);
+        $deleteUser = DeleteUserUseCase::create(new UserRepositoryContractFake());
+        $deleteUser(1);
     }
 }

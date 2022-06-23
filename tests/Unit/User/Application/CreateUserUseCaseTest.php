@@ -5,6 +5,7 @@ namespace Tests\Unit\User\Application;
 use Tests\TestCase;
 use Src\WorkHours\User\Application\CreateUserUseCase;
 use Tests\Unit\User\Domain\Contracts\UserRepositoryContractFake;
+use Tests\Unit\User\Domain\Exception\ExceptionSuccess;
 
 
 class CreateUserUseCaseTest extends TestCase
@@ -14,11 +15,11 @@ class CreateUserUseCaseTest extends TestCase
     {
         $this->expectException(\InvalidArgumentException::class);
 
-        $createUser = new CreateUserUseCase(new UserRepositoryContractFake());
-        $createUser->__invoke(
+        $createUser = CreateUserUseCase::create(new UserRepositoryContractFake());
+        $createUser(
             'fake',
             'password',
-            null
+            'token'
         );
     }
 
@@ -26,11 +27,25 @@ class CreateUserUseCaseTest extends TestCase
     {
         $this->expectException(\InvalidArgumentException::class);
 
-        $createUser = new CreateUserUseCase(new UserRepositoryContractFake());
-        $createUser->__invoke(
+        $createUser = CreateUserUseCase::create(new UserRepositoryContractFake());
+        $createUser(
             'user@mail.com',
             'fake',
             'token'
         );
     }
+
+    // test crate user not exceptions   (success)
+    public function testCreateUserSuccess()
+    {
+        $createUser = CreateUserUseCase::create(new UserRepositoryContractFake());
+        $createUser(
+            'user@mail.com',
+            'password',
+            'token'
+        );
+
+        $this->assertTrue(true);
+    }
+
 }

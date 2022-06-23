@@ -2,7 +2,9 @@
 
 namespace Tests\Unit\User\Domain\Contracts;
 
+use phpDocumentor\Reflection\Types\Boolean;
 use Src\WorkHours\User\Domain\Contracts\UserRepositoryContract;
+use Src\WorkHours\User\Domain\Exceptions\valueIsNotCorrect;
 use Src\Workhours\User\Domain\User;
 use Src\Workhours\User\Domain\ValueObjects\UserEmail;
 use Src\Workhours\User\Domain\ValueObjects\UserId;
@@ -20,7 +22,7 @@ class UserRepositoryContractFake implements UserRepositoryContract
         if ($user->password()->value() == 'fake') {
             throw new \InvalidArgumentException('User password cannot be fake');
         }
-    }
+   }
 
     public function findById(UserId $id): ?User
     {
@@ -40,14 +42,18 @@ class UserRepositoryContractFake implements UserRepositoryContract
         return null;
     }
 
-    public function update(UserId $userId, User $user): void
+    public function update(UserId $userId, User $user): bool
     {
+        if ($userId->value() == 1 ) {
+            return true;
+        }
+        return false;
     }
 
     public function delete(UserId $id): void
     {
         if ($id->value() != 1) {
-            throw new \InvalidArgumentException('User cannot be deleted');
+            throw valueIsNotCorrect::create($id->value());
         }
         if ($id->value() == 1) {
             throw new ExceptionSuccess('User successfully deleted');

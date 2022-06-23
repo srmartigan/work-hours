@@ -12,16 +12,14 @@ class FindUserByIdUseCaseTest extends TestCase
 
     public function testFindUserByIdUseCaseSuccess()
     {
-        $userRepository = new UserRepositoryContractFake();
-        $useCase = new FindUserByIdUseCase($userRepository);
+        $useCase = FindUserByIdUseCase::create(new UserRepositoryContractFake());
         $user = $useCase(1);
         $this->assertInstanceOf(User::class, $user);
     }
 
     public function testFindUserByIdUseCaseFail()
     {
-        $userRepository = new UserRepositoryContractFake();
-        $useCase = new FindUserByIdUseCase($userRepository);
+        $useCase = FindUserByIdUseCase::create(new UserRepositoryContractFake());
         $this->expectException(\InvalidArgumentException::class);
         $user = $useCase->__invoke(2);
     }
