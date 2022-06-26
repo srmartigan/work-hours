@@ -19,10 +19,10 @@ class RegisterController extends Controller
         $datos = json_decode($request['json']);
 
         if (!$this->ComprobarDatos($datos)) {
-            return response(
-                $error = 'error faltan parametros',
-                $status = 400
-            );
+            return response()->json([
+                'error' => 'error faltan parametros',
+                'status' => 400
+            ], 400);
         }
 
         if (!$this->validateLogin($datos)) {
@@ -34,10 +34,10 @@ class RegisterController extends Controller
 
         $usuario = User::crearUsuario($datos);
 
-        return response(
-            $mensaje = 'Usuario registrado correctamente',
-            $status = 200
-        );
+        return response()->json([
+            'mensaje' => 'Usuario registrado correctamente',
+            'status' => 200
+        ]);
     }
 
     function ComprobarDatos($datos): bool
@@ -53,8 +53,8 @@ class RegisterController extends Controller
     {
         $validator = Validator::make((array)$datos, [
             'nombre' => 'required',
-            'email' => 'required | unique:users',
-            'password' => 'required | min:4 | max:20',
+            'email' => 'required | email | unique:users',
+            'password' => 'required | between:4,12',
         ]);
 
         if ($validator->fails()) {

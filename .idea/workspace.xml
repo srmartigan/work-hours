@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="Creando test vacio RegisterControllerTest.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,24 +240,24 @@
       <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Auth\LoginControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" scope="Class" />
+    <configuration name="RegisterControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Auth\RegisterControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginControllerTest.testLoginPasswordFail" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Auth\LoginControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" method="testLoginPasswordFail" scope="Method" />
+    <configuration name="RegisterControllerTest.test_register_email_not_correct" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Auth\RegisterControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" method="test_register_email_not_correct" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginControllerTest.test_login_argument_password_do_not_exit" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Auth\LoginControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" method="test_login_argument_password_do_not_exit" scope="Method" />
+    <configuration name="RegisterControllerTest.test_register_name_repetido" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Auth\RegisterControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" method="test_register_name_repetido" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginControllerTest.test_login_argumento_email_do_not_exit" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Auth\LoginControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" method="test_login_argumento_email_do_not_exit" scope="Method" />
+    <configuration name="RegisterControllerTest.test_register_password_not_correct_bigger_12" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Auth\RegisterControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" method="test_register_password_not_correct_bigger_12" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginControllerTest.test_login_password_do_not_exit" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Auth\LoginControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" method="test_login_password_do_not_exit" scope="Method" />
+    <configuration name="RegisterControllerTest.test_register_password_not_correct_minor_4" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Auth\RegisterControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" method="test_register_password_not_correct_minor_4" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -268,11 +266,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.LoginControllerTest" />
-        <item itemvalue="PHPUnit.LoginControllerTest.test_login_argument_password_do_not_exit" />
-        <item itemvalue="PHPUnit.LoginControllerTest.test_login_argumento_email_do_not_exit" />
-        <item itemvalue="PHPUnit.LoginControllerTest.test_login_password_do_not_exit" />
-        <item itemvalue="PHPUnit.LoginControllerTest.testLoginPasswordFail" />
+        <item itemvalue="PHPUnit.RegisterControllerTest.test_register_name_repetido" />
+        <item itemvalue="PHPUnit.RegisterControllerTest" />
+        <item itemvalue="PHPUnit.RegisterControllerTest.test_register_password_not_correct_bigger_12" />
+        <item itemvalue="PHPUnit.RegisterControllerTest.test_register_password_not_correct_minor_4" />
+        <item itemvalue="PHPUnit.RegisterControllerTest.test_register_email_not_correct" />
       </list>
     </recent_temporary>
   </component>
@@ -373,7 +371,28 @@
       <option name="project" value="LOCAL" />
       <updated>1656278948133</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Mejorado RegisterController.php">
+      <created>1656282003817</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1656282003817</updated>
+    </task>
+    <task id="LOCAL-00011" summary="modificado gitignore">
+      <created>1656282377006</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1656282377006</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Creando test vacio RegisterControllerTest.php">
+      <created>1656282757570</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1656282757570</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +420,10 @@
     <MESSAGE value="Creando test para FindUserByIdUseCase" />
     <MESSAGE value="Añadiendo Named Constructor a los Casos de Usos." />
     <MESSAGE value="Mejorando ubicación de carpetas del proyecto.&#10;Adaptando el Login para tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mejorando ubicación de carpetas del proyecto.&#10;Adaptando el Login para tests." />
+    <MESSAGE value="Mejorado RegisterController.php" />
+    <MESSAGE value="modificado gitignore" />
+    <MESSAGE value="Creando test vacio RegisterControllerTest.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creando test vacio RegisterControllerTest.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
