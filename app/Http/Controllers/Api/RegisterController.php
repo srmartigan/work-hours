@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
@@ -12,11 +14,11 @@ class RegisterController extends Controller
     public function index(Request $request)
     {
 
-         //TODO: Falta añadir que se cree la configuracion del usuario nuevo registrado
+        //TODO: Falta añadir que se cree la configuracion del usuario nuevo registrado
 
-        $datos = json_decode($request->json);
+        $datos = json_decode($request['json']);
 
-        if (!$this->ComprobarDatos($datos)){
+        if (!$this->ComprobarDatos($datos)) {
             return response(
                 $error = 'error faltan parametros',
                 $status = 400
@@ -38,9 +40,9 @@ class RegisterController extends Controller
         );
     }
 
-    function ComprobarDatos($datos)
+    function ComprobarDatos($datos): bool
     {
-        if (!isset($datos->nombre) || !isset($datos->email) || !isset($datos->password)){
+        if (!isset($datos->nombre) || !isset($datos->email) || !isset($datos->password)) {
             return false;
         }
 
@@ -52,7 +54,7 @@ class RegisterController extends Controller
         $validator = Validator::make((array)$datos, [
             'nombre' => 'required',
             'email' => 'required | unique:users',
-            'password' => 'required | between:4,12',
+            'password' => 'required | min:4 | max:20',
         ]);
 
         if ($validator->fails()) {
