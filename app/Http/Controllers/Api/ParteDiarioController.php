@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Helper;
 use App\Http\Controllers\Controller;
-use App\ParteDiario;
-use App\User;
-use http\Exception;
+use App\Models\Helper;
+use App\Models\ParteDiario;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class ParteDiarioController extends Controller
 {

@@ -3,8 +3,8 @@
 namespace Src\WorkHours\User\Application;
 
 use Src\WorkHours\User\Domain\Contracts\UserRepositoryContract;
-use Src\Workhours\User\Domain\User;
-use Src\Workhours\User\Domain\ValueObjects\UserId;
+use Src\WorkHours\User\Domain\User;
+use Src\WorkHours\User\Domain\ValueObjects\UserId;
 
 
 final class FindUserByIdUseCase

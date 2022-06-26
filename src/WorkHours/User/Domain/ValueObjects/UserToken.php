@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Workhours\User\Domain\ValueObjects;
+namespace Src\WorkHours\User\Domain\ValueObjects;
 
 use InvalidArgumentException;
 

@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Src\WorkHours\User\Application;
 
 use Src\WorkHours\User\Domain\Contracts\UserRepositoryContract;
-use Src\Workhours\User\Domain\User;
-use Src\Workhours\User\Domain\ValueObjects\UserEmail;
-use Src\Workhours\User\Domain\ValueObjects\UserPassword;
-use Src\Workhours\User\Domain\ValueObjects\UserToken;
+use Src\WorkHours\User\Domain\User;
+use Src\WorkHours\User\Domain\ValueObjects\UserEmail;
+use Src\WorkHours\User\Domain\ValueObjects\UserPassword;
+use Src\WorkHours\User\Domain\ValueObjects\UserToken;
 
 
 final class CreateUserUseCase

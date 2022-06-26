@@ -3,10 +3,10 @@
 namespace Tests\Unit\User\Domain;
 
 
-use Src\Workhours\User\Domain\User;
-use Src\Workhours\User\Domain\ValueObjects\UserEmail;
-use Src\Workhours\User\Domain\ValueObjects\UserPassword;
-use Src\Workhours\User\Domain\ValueObjects\UserToken;
+use Src\WorkHours\User\Domain\User;
+use Src\WorkHours\User\Domain\ValueObjects\UserEmail;
+use Src\WorkHours\User\Domain\ValueObjects\UserPassword;
+use Src\WorkHours\User\Domain\ValueObjects\UserToken;
 use Tests\TestCase;
 
 class UserTest extends TestCase

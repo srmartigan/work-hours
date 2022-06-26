@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Helper;
-use App\ParteDiario;
-use DateTime;
+use App\Models\Helper;
+use App\Models\ParteDiario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

@@ -2,10 +2,9 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Helper;
-use App\ParteDiario;
+use App\Models\Helper;
+use App\Models\ParteDiario;
 use Faker\Generator as Faker;
-use Illuminate\Support\Str;
 
 $factory->define(ParteDiario::class, function (Faker $faker) {
     $horaEntrada =  $faker->time('H:i' , '22:00');

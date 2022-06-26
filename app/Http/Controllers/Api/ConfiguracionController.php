@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\ConfiguracionUsuario;
-use App\Helper;
 use App\Http\Controllers\Controller;
+use App\Models\ConfiguracionUsuario;
+use App\Models\Helper;
 use Illuminate\Http\Request;
 
 class ConfiguracionController extends Controller

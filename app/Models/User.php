@@ -1,8 +1,7 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Mockery\Exception;
@@ -66,11 +65,11 @@ class User extends Authenticatable
 
     public function configuracion()
     {
-        return $this->hasOne('App\ConfiguracionUsuario','userId');
+        return $this->hasOne('App\Models\ConfiguracionUsuario','userId');
     }
 
     public function parteDiario()
     {
-        return $this->hasMany('App\ParteDiario','userId');
+        return $this->hasMany('App\Models\ParteDiario','userId');
     }
 }
