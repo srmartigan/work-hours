@@ -11,4 +11,13 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 Roadmap.md
-/.idea
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/misc.xml
+.idea/tasks.xml
+.idea/compiler.xml
+.idea/inspections.xml
+.idea/runConfigurations.xml
+.idea/daemon.xml
+.ide
+
