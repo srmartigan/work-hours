@@ -1,12 +1,9 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Carbon\Carbon;
-use Carbon\Traits\Date;
 use Illuminate\Database\Eloquent\Model;
-use App\User;
-use App\Helper;
 
 class ParteDiario extends Model
 {

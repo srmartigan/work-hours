@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\api;
 
-use App\Helper;
 use App\Http\Controllers\Controller;
-use App\ParteDiario;
-use Exception;
+use App\Models\Helper;
+use App\Models\ParteDiario;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 

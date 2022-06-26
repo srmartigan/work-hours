@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Helper;
-use App\ParteDiario;
-use App\User;
+use App\Models\Helper;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class DocumentosController extends Controller
 {

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Src\WorkHours\User\Domain\Contracts;
 
-use Src\Workhours\User\Domain\User;
-use Src\Workhours\User\Domain\ValueObjects\UserEmail;
-use Src\Workhours\User\Domain\ValueObjects\UserId;
+use Src\WorkHours\User\Domain\User;
+use Src\WorkHours\User\Domain\ValueObjects\UserEmail;
+use Src\WorkHours\User\Domain\ValueObjects\UserId;
 
 interface UserRepositoryContract
 {

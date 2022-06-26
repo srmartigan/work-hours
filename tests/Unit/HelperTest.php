@@ -4,8 +4,8 @@
 namespace Tests\Unit;
 
 
+use App\Models\Helper;
 use Tests\TestCase;
-use App\Helper;
 
 class HelperTest extends TestCase
 {

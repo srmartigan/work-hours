@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\ConfiguracionUsuario;
-use App\Helper;
-use App\ParteDiario;
-use App\User;
+use App\Models\Helper;
+use App\Models\ParteDiario;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;

@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\ListadoPartesController;
 use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\ParteDiarioController;
 use App\Http\Controllers\Api\RegisterController;
+use Illuminate\Support\Facades\Route;
 
 
 /*

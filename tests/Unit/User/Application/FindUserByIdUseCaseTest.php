@@ -3,7 +3,7 @@
 namespace Tests\Unit\User\Application;
 
 use Src\WorkHours\User\Application\FindUserByIdUseCase;
-use Src\Workhours\User\Domain\User;
+use Src\WorkHours\User\Domain\User;
 use Tests\TestCase;
 use Tests\Unit\User\Domain\Contracts\UserRepositoryContractFake;
 

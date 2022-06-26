@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Creando test para FindUserByIdUseCase">
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/Exceptions/ValueIsNotCorrect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/User/Application/UpdateUserUseCaseTest.php" afterDir="false" />
+    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Mejorando ubicación de carpetas del proyecto.&#10;Adaptando el Login para tests.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Application/CreateUserUseCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Application/CreateUserUseCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Application/DeleteUserUseCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Application/DeleteUserUseCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Application/FindUserByIdUseCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Application/FindUserByIdUseCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Application/UpdateUserUseCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Application/UpdateUserUseCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Domain/Contracts/UserRepositoryContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/Contracts/UserRepositoryContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/User/Domain/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/User/Domain/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/User/Application/CreateUserUseCaseTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/User/Application/CreateUserUseCaseTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/User/Application/DeleteUserUseCaseTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/User/Application/DeleteUserUseCaseTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/User/Application/FindUserByIdUseCaseTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/User/Application/FindUserByIdUseCaseTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/User/Domain/Contracts/UserRepositoryContractFake.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/User/Domain/Contracts/UserRepositoryContractFake.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,22 +205,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit",
-    "last_opened_file_path": "C:/laragon/www/workhours/backend/tests/Unit/User/Application",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary&quot;: &quot;Codeception Functional&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/workhours/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\workhours\backend\src\WorkHours" />
@@ -245,25 +233,25 @@
       <recent name="D:\wamp64\www\work-hours" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
-    <configuration name="CreateUserUseCaseTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\User\Application\CreateUserUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/CreateUserUseCaseTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.LoginControllerTest">
+    <configuration name="LoginControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Auth\LoginControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="CreateUserUseCaseTest.testCreateUserWithInvalidPassword" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\User\Application\CreateUserUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/CreateUserUseCaseTest.php" method="testCreateUserWithInvalidPassword" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="DeleteUserUseCaseTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\User\Application\DeleteUserUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/DeleteUserUseCaseTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="FindUserByIdUseCaseTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\User\Application\FindUserByIdUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/FindUserByIdUseCaseTest.php" scope="Class" />
+    <configuration name="LoginControllerTest.test_example" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Auth\LoginControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" method="test_example" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="UpdateUserUseCaseTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\User\Application\UpdateUserUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/UpdateUserUseCaseTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UpdateUserUseCaseTest.testUpdateUserUseCaseFail" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\User\Application\UpdateUserUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/UpdateUserUseCaseTest.php" method="testUpdateUserUseCaseFail" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UpdateUserUseCaseTest.testUpdateUserUseCaseSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\User\Application\UpdateUserUseCaseTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/User/Application/UpdateUserUseCaseTest.php" method="testUpdateUserUseCaseSuccess" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -272,11 +260,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.LoginControllerTest" />
+        <item itemvalue="PHPUnit.LoginControllerTest.test_example" />
         <item itemvalue="PHPUnit.UpdateUserUseCaseTest" />
-        <item itemvalue="PHPUnit.FindUserByIdUseCaseTest" />
-        <item itemvalue="PHPUnit.DeleteUserUseCaseTest" />
-        <item itemvalue="PHPUnit.CreateUserUseCaseTest" />
-        <item itemvalue="PHPUnit.CreateUserUseCaseTest.testCreateUserWithInvalidPassword" />
+        <item itemvalue="PHPUnit.UpdateUserUseCaseTest.testUpdateUserUseCaseFail" />
+        <item itemvalue="PHPUnit.UpdateUserUseCaseTest.testUpdateUserUseCaseSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -311,7 +299,8 @@
       <workItem from="1655745190090" duration="20000" />
       <workItem from="1655745224212" duration="16014000" />
       <workItem from="1655830027519" duration="105000" />
-      <workItem from="1655914102161" duration="15784000" />
+      <workItem from="1655914102161" duration="24409000" />
+      <workItem from="1656238746790" duration="27988000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
@@ -362,7 +351,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655938572482</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Añadiendo Named Constructor a los Casos de Usos.">
+      <created>1656004367710</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1656004367710</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Mejorando ubicación de carpetas del proyecto.&#10;Adaptando el Login para tests.">
+      <created>1656278948133</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1656278948133</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +391,9 @@
     <MESSAGE value="Ver 1.5 add DDD&#10;Reordenando Tests" />
     <MESSAGE value="Creando caso de uso: FindUserByIdUseCase" />
     <MESSAGE value="Creando test para FindUserByIdUseCase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creando test para FindUserByIdUseCase" />
+    <MESSAGE value="Añadiendo Named Constructor a los Casos de Usos." />
+    <MESSAGE value="Mejorando ubicación de carpetas del proyecto.&#10;Adaptando el Login para tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mejorando ubicación de carpetas del proyecto.&#10;Adaptando el Login para tests." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

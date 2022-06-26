@@ -2,9 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Helper;
-use App\ParteDiario;
-use Illuminate\Pagination\LengthAwarePaginator;
+use App\Models\Helper;
 use Livewire\Component;
 use Livewire\WithPagination;
 

@@ -1,10 +1,8 @@
 <?php
 
+use App\Models\ParteDiario;
 use Illuminate\Database\Seeder;
-use App\ParteDiario;
-use Illuminate\Support\Facades\Date;
-use Illuminate\Support\Facades\DB;
-
+use Illuminate\Database\Eloquent\Factories\Factory ;
 class ParteDiarioSeeder extends Seeder
 {
     /**
@@ -14,6 +12,6 @@ class ParteDiarioSeeder extends Seeder
      */
     public function run()
     {
-      factory(ParteDiario::class,50)->create();
+
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App;
+namespace App\Models;
 
 
 use Carbon\Carbon;
@@ -9,7 +9,6 @@ use DateTime;
 use DomainException;
 use Firebase\JWT\JWT;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use UnexpectedValueException;

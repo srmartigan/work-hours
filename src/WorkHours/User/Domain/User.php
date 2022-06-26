@@ -2,15 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Src\Workhours\User\Domain;
+namespace Src\WorkHours\User\Domain;
 
-use Src\Workhours\User\Domain\ValueObjects\UserEmail;
-use Src\Workhours\User\Domain\ValueObjects\UserPassword;
-use Src\Workhours\User\Domain\ValueObjects\UserToken;
+use Src\WorkHours\User\Domain\ValueObjects\UserEmail;
+use Src\WorkHours\User\Domain\ValueObjects\UserId;
+use Src\WorkHours\User\Domain\ValueObjects\UserPassword;
+use Src\WorkHours\User\Domain\ValueObjects\UserToken;
 
 
 class User
 {
+    private UserId $id;
     private UserEmail $email; // UserEmail
     private UserPassword $password; // UserPassword
     private UserToken $token; // UserToken
@@ -40,9 +42,16 @@ class User
 
     public function token(): ?UserToken
     {
-        if(is_null($this->token)){
-            return null;
-        }
         return $this->token;
+    }
+
+    public function id(): UserId
+    {
+        return $this->id;
+    }
+
+    public function setId(UserId $id): void
+    {
+        $this->id = $id;
     }
 }
