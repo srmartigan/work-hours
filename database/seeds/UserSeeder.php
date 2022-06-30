@@ -13,12 +13,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('Users')->insert([
+        DB::table('users')->insert([
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'password' =>hash('sha256' ,'1234')
         ]);
-        DB::table('Users')->insert([
+        DB::table('users')->insert([
             'name' => 'lolo',
             'email' => 'lolo@admin.com',
             'password' =>hash ('sha256' ,'1234')

@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="Creando test vacio RegisterControllerTest.php">
+      <change afterPath="$PROJECT_DIR$/.env.testing" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/remote-mappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/7.4/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/7.4/php.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/7.4/start-container" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/7.4/supervisord.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/8.0/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/8.0/php.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/8.0/start-container" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/8.0/supervisord.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/8.1/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/8.1/php.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/8.1/start-container" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/8.1/supervisord.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,16 +75,34 @@
         <option value="Jonatan Iglesias Vicente" />
       </list>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="work-hours-1.5" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.env" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.env.testing" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/Http/Controllers/ListadoPartesController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/database.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/database/seeds/User1Seeder.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docker/8.1/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docker/8.1/php.ini" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docker/8.1/start-container" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/phpunit.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/routes/api.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WorkHours/User/Application/DeleteUserUseCase.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WorkHours/User/Application/FindUserByIdUseCase.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WorkHours/User/Application/UpdateUserUseCase.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WorkHours/User/Domain/Contracts/UserRepositoryContract.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/WorkHours/User/Domain/ValueObjects/UserId.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/Unit/User/Application/CreateUserUseCaseTest.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -71,7 +110,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="laravel.test">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
@@ -207,24 +246,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "Codeception Functional",
-    "last_opened_file_path": "C:/laragon/www/workhours/backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "settings.editor.selected.configurable": "yiiguxing.plugin.translate",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary&quot;: &quot;Codeception Functional&quot;,
+    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
+    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/srmartigan/www/workhours/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="C:\laragon\www\workhours\backend\src\WorkHours" />
       <recent name="D:\laragon\www\work-hours" />
       <recent name="D:\wamp64\www\work-hours\tests\Unit" />
@@ -235,42 +279,66 @@
       <recent name="D:\wamp64\www\work-hours" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
-    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
+  <component name="RunManager" selected="PHPUnit.Application">
+    <configuration name="Application" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="/var/www/html/phpunit.xml" directory="$PROJECT_DIR$/tests/Unit/User/Application" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisterControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Auth\RegisterControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" scope="Class" />
+    <configuration name="Feature" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="/var/www/html/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisterControllerTest.test_register_email_not_correct" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Auth\RegisterControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" method="test_register_email_not_correct" scope="Method" />
+    <configuration name="LoginControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="laravel.test" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Feature\Http\Controllers\Auth\LoginControllerTest" configuration_file="/var/www/html/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisterControllerTest.test_register_name_repetido" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Auth\RegisterControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" method="test_register_name_repetido" scope="Method" />
+    <configuration name="LoginControllerTest.test_login_success" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Http\Controllers\Auth\LoginControllerTest" configuration_file="/var/www/html/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/LoginControllerTest.php" method="test_login_success" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisterControllerTest.test_register_password_not_correct_bigger_12" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Auth\RegisterControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" method="test_register_password_not_correct_bigger_12" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RegisterControllerTest.test_register_password_not_correct_minor_4" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Http\Controllers\Auth\RegisterControllerTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" method="test_register_password_not_correct_minor_4" scope="Method" />
+    <configuration name="PhpUnitDocker" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="laravel.test" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner configuration_file="/var/www/html/phpunit.xml" scope="XML" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 8.1" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="/var/www/html/phpunit.xml" directory="$PROJECT_DIR$/tests" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHPUnit.PhpUnitDocker" />
+      <item itemvalue="PHPUnit.Application" />
+      <item itemvalue="PHPUnit.tests" />
+      <item itemvalue="PHPUnit.Feature" />
+      <item itemvalue="PHPUnit.LoginControllerTest.test_login_success" />
+      <item itemvalue="PHPUnit.LoginControllerTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.RegisterControllerTest.test_register_name_repetido" />
-        <item itemvalue="PHPUnit.RegisterControllerTest" />
-        <item itemvalue="PHPUnit.RegisterControllerTest.test_register_password_not_correct_bigger_12" />
-        <item itemvalue="PHPUnit.RegisterControllerTest.test_register_password_not_correct_minor_4" />
-        <item itemvalue="PHPUnit.RegisterControllerTest.test_register_email_not_correct" />
+        <item itemvalue="PHPUnit.Application" />
+        <item itemvalue="PHPUnit.Feature" />
+        <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.LoginControllerTest" />
+        <item itemvalue="PHPUnit.LoginControllerTest.test_login_success" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +351,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="" />
+      <changelist id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="Creando test vacio RegisterControllerTest.php" />
       <created>1571934332379</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -307,6 +375,22 @@
       <workItem from="1655830027519" duration="105000" />
       <workItem from="1655914102161" duration="24409000" />
       <workItem from="1656238746790" duration="27988000" />
+      <workItem from="1656364134163" duration="123000" />
+      <workItem from="1656364271308" duration="514000" />
+      <workItem from="1656365099374" duration="1360000" />
+      <workItem from="1656366712048" duration="4957000" />
+      <workItem from="1656426497330" duration="2842000" />
+      <workItem from="1656449865984" duration="2054000" />
+      <workItem from="1656452874848" duration="718000" />
+      <workItem from="1656521970825" duration="1744000" />
+      <workItem from="1656534693104" duration="5237000" />
+      <workItem from="1656540265293" duration="3577000" />
+      <workItem from="1656543852479" duration="669000" />
+      <workItem from="1656544535606" duration="200000" />
+      <workItem from="1656606899988" duration="1248000" />
+      <workItem from="1656608156437" duration="1750000" />
+      <workItem from="1656610315068" duration="675000" />
+      <workItem from="1656611645157" duration="4996000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
@@ -410,6 +494,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Esqueleto basico de la app" />
     <MESSAGE value="UPDATE Ver 1.3 con LARAVEL 9" />
     <MESSAGE value="inicio branch Ver 1.4 con LARAVEL 9" />
@@ -431,7 +516,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend@TestUserDomain_testUserId.xml" NAME="TestUserDomain.testUserId Coverage Results" MODIFIED="1655747083549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/work_hours@ExampleTest_testBasicTest__1_.xml" NAME="ExampleTest.testBasicTest (1) Coverage Results" MODIFIED="1572269904724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/work_hours@RutasVistasAppTest_testRutaDocumentos.xml" NAME="RutasVistasAppTest.testRutaDocumentos Coverage Results" MODIFIED="1574861739060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/work_hours@ExampleTest_testBasicTest__1_.xml" NAME="ExampleTest.testBasicTest (1) Coverage Results" MODIFIED="1572269904724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

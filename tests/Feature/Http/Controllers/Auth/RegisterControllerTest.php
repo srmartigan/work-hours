@@ -103,7 +103,7 @@ class RegisterControllerTest extends TestCase
 
     public function test_register_name_repetido()
     {
-        DB::table('Users')->insert([
+        DB::table('users')->insert([
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'password' => hash('sha256', '1234')
