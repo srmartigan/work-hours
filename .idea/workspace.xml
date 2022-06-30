@@ -4,31 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="Creando test vacio RegisterControllerTest.php">
-      <change afterPath="$PROJECT_DIR$/.env.testing" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/remote-mappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/7.4/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/7.4/php.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/7.4/start-container" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/7.4/supervisord.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/8.0/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/8.0/php.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/8.0/start-container" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/8.0/supervisord.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/8.1/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/8.1/php.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/8.1/start-container" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/8.1/supervisord.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Http/Controllers/Auth/RegisterControllerTest.php" afterDir="false" />
+    <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="Implementado metodo update class EloquentUserRepositoryContract.php">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -390,7 +367,7 @@
       <workItem from="1656606899988" duration="1248000" />
       <workItem from="1656608156437" duration="1750000" />
       <workItem from="1656610315068" duration="675000" />
-      <workItem from="1656611645157" duration="4996000" />
+      <workItem from="1656611645157" duration="6325000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
@@ -476,7 +453,28 @@
       <option name="project" value="LOCAL" />
       <updated>1656282757570</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Montando la app en Ubuntu con laravel sail (Contenedor Docker)">
+      <created>1656622591810</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1656622591810</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Implementado metodo delete class EloquentUserRepositoryContract.php">
+      <created>1656623232858</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1656623232858</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Implementado metodo update class EloquentUserRepositoryContract.php">
+      <created>1656623390215</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1656623390215</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +506,10 @@
     <MESSAGE value="Mejorado RegisterController.php" />
     <MESSAGE value="modificado gitignore" />
     <MESSAGE value="Creando test vacio RegisterControllerTest.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creando test vacio RegisterControllerTest.php" />
+    <MESSAGE value="Montando la app en Ubuntu con laravel sail (Contenedor Docker)" />
+    <MESSAGE value="Implementado metodo delete class EloquentUserRepositoryContract.php" />
+    <MESSAGE value="Implementado metodo update class EloquentUserRepositoryContract.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementado metodo update class EloquentUserRepositoryContract.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

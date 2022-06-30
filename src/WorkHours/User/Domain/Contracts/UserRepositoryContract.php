@@ -18,5 +18,5 @@ interface UserRepositoryContract
 
     public function update(UserId $userId, User $user): bool;
 
-    public function delete(UserId $id): bool;
+    public function delete(UserId $id): void;
 }

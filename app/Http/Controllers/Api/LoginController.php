@@ -70,7 +70,7 @@ class LoginController extends Controller
     {
         $email = $datos->email;
         $password = hash('sha256', $datos->password);
-//dd($password, $email);
+
         $user = User::where('email', $email)->where('password', $password)->first();
 
         if (is_null($user)) {

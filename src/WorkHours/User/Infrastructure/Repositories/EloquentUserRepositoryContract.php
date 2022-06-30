@@ -52,14 +52,13 @@ class EloquentUserRepositoryContract implements UserRepositoryContract
         return true;
     }
 
-    public function delete(UserId $id): bool
+    public function delete(UserId $id): void
     {
         $user = UserEloquent::query()->find($id->Value());
         if (is_null($user)) {
-            return false;
+            throw valueIsNotCorrect::create($id->Value());
         }
-
         $user->delete();
-        return true;
+        throw new ExceptionSuccess('User successfully deleted');
     }
 }
