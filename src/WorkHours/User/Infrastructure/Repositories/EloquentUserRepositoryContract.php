@@ -42,7 +42,14 @@ class EloquentUserRepositoryContract implements UserRepositoryContract
 
     public function update(UserId $userId, User $user): bool
     {
-        // TODO: Implement update() method.
+        $userEloquent = UserEloquent::query()->find($userId->Value());
+        if (is_null($userEloquent)) {
+            return false;
+        }
+        $userEloquent->email = $user->email()->Value();
+        $userEloquent->password = $user->Password()->Value();
+        $userEloquent->save();
+        return true;
     }
 
     public function delete(UserId $id): bool
