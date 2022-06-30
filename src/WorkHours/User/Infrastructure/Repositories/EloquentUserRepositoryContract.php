@@ -13,13 +13,13 @@ class EloquentUserRepositoryContract implements UserRepositoryContract
 
     public function findByCriteria(UserEmail $userEmail): ?User
     {
-       return UserEloquent::query()->where('email', $userEmail->value())->first();
+        return UserEloquent::query()->where('email', $userEmail->value())->first();
     }
 
     public function findById(UserId $id): ?User
     {
         $userEloquent = UserEloquent::query()->find($id->Value());
-        if(is_null($userEloquent)){
+        if (is_null($userEloquent)) {
             return null;
         }
         $user = new User($userEloquent->email, $userEloquent->password, $userEloquent->token);
@@ -45,8 +45,14 @@ class EloquentUserRepositoryContract implements UserRepositoryContract
         // TODO: Implement update() method.
     }
 
-    public function delete(UserId $id): void
+    public function delete(UserId $id): bool
     {
-        // TODO: Implement delete() method.
+        $user = UserEloquent::query()->find($id->Value());
+        if (is_null($user)) {
+            return false;
+        }
+
+        $user->delete();
+        return true;
     }
 }
