@@ -12,8 +12,32 @@ Estructura:
     -precio_hora_extra (float dinero)
 
 -------------------------------------------------------------------
+ParteDiario:
+    -id
+    -userId
+    -fecha (String)
+    -HoraEntrada (String)
+    -HoraSalida (String)
+    -TotalHoras (String)
+    -almuerzo (0 false 1 true)
+    -comida (0 false 1 true)
+    -merienda (0 false 1 true)
+
+    ValueObjects:
+        -ParteDiarioId
+        -UserId (ValueObject User)
+        -ParteDiarioFecha (ValueObject Date)
+        -ParteDiarioHoraEntrada (ValueObject String)
+        -ParteDiarioHoraSalida (ValueObject String)
+        -ParteDiarioTotalHoras (ValueObject String)
+        -ParteDiarioAlmuerzo (ValueObject Boolean)
+        -ParteDiarioComida (ValueObject Boolean)
+        -ParteDiarioMerienda (ValueObject Boolean)
+
+
+_________________________________________________________________
 Casos de Uso:
-    
+
     -primer caso de uso
     -segundo caso de uso
     -.... etc casos de usos
@@ -22,4 +46,4 @@ Casos de Uso:
 Git
 
     Cambiar rama:
-    git checkout "nombre de la rama"  
+    git checkout "nombre de la rama"
