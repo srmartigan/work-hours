@@ -29,7 +29,7 @@ class ParteDiario
         ParteDiarioMerienda $merienda
     ) {}
 
-    public function getParteDiarioId(): ParteDiarioId
+    public function ParteDiarioId(): ParteDiarioId
     {
         return new ParteDiarioId($this->parteDiarioId);
     }

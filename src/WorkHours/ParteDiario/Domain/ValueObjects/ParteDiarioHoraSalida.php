@@ -6,5 +6,15 @@ namespace Src\WorkHours\ParteDiario\Domain\ValueObjects;
 
 class ParteDiarioHoraSalida
 {
+    private string $value;
 
+    public function __construct(string $value)
+    {
+        $this->value = date('H:i', strtotime($value));
+    }
+
+    public function value(): string
+    {
+        return $this->value;
+    }
 }

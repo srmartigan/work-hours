@@ -4,19 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="Arreglado bug que afectaba al metodo delete de EloquentUserRepositoryContract.php">
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ParteDiario.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioAlmuerzo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioComida.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioFecha.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraEntrada.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraSalida.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioId.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioMerienda.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioTotalHoras.php" afterDir="false" />
+    <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="Modelando Dominio ParteDiario.&#10;Implementado value objets">
+      <change afterPath="$PROJECT_DIR$/.idea/blade.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/Exceptions/ExceptionDomainValueOutOfRange.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/Estructura tabla configuracion Usuario" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Estructura tabla configuracion Usuario" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ParteDiarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ParteDiarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ParteDiario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ParteDiario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioAlmuerzo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioAlmuerzo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioComida.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioComida.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioFecha.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioFecha.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraEntrada.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraEntrada.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraSalida.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraSalida.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioId.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioId.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioMerienda.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioMerienda.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioTotalHoras.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioTotalHoras.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -387,6 +389,8 @@
       <workItem from="1656767867057" duration="2668000" />
       <workItem from="1656770543729" duration="87000" />
       <workItem from="1656770790977" duration="1912000" />
+      <workItem from="1656801608778" duration="2626000" />
+      <workItem from="1656844097907" duration="2873000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
@@ -507,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656627637897</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Modelando Dominio ParteDiario">
+      <created>1656805409206</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1656805409206</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +554,9 @@
     <MESSAGE value="Implementado metodo delete class EloquentUserRepositoryContract.php" />
     <MESSAGE value="Implementado metodo update class EloquentUserRepositoryContract.php" />
     <MESSAGE value="Arreglado bug que afectaba al metodo delete de EloquentUserRepositoryContract.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arreglado bug que afectaba al metodo delete de EloquentUserRepositoryContract.php" />
+    <MESSAGE value="Modelando Dominio ParteDiario" />
+    <MESSAGE value="Modelando Dominio ParteDiario.&#10;Implementado value objets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modelando Dominio ParteDiario.&#10;Implementado value objets" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
