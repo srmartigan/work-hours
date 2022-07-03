@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="utilizando expresiones regulares para el control de las fechas.">
-      <change afterPath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioHoraSalidaTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraEntrada.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraEntrada.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraSalida.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraSalida.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="PhpDebugGeneral" xdebug_force_break_when_no_path_mapping="false" />
+  <component name="PhpDebugGeneral" listening_started="true" xdebug_force_break_when_no_path_mapping="false" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="laravel.test">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
@@ -235,7 +233,7 @@
     "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker Compose",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker Compose",
-    "last_opened_file_path": "/home/srmartigan/www/workhours/backend/src/WorkHours",
+    "last_opened_file_path": "/home/srmartigan/www/example-app",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -400,6 +398,8 @@
       <workItem from="1656770790977" duration="1912000" />
       <workItem from="1656801608778" duration="2626000" />
       <workItem from="1656844097907" duration="15706000" />
+      <workItem from="1656862839950" duration="722000" />
+      <workItem from="1656864511169" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
