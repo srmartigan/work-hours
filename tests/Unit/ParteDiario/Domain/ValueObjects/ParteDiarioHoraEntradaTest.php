@@ -24,7 +24,7 @@ class ParteDiarioHoraEntradaTest extends TestCase
     public function test_hora_entrada_formato_no_valido_lanza_throw_exception()
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage('Hora de entrada deve ser no formato hh:mm');
+        $this->expectExceptionMessage('Hora de entrada debe ser de formato hh:mm');
 
         new ParteDiarioHoraEntrada('8:00');
     }
@@ -32,7 +32,7 @@ class ParteDiarioHoraEntradaTest extends TestCase
     public function test_hora_entrada_formato_no_valido_lanza_throw_exception_2()
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage('Hora de entrada deve ser no formato hh:mm');
+        $this->expectExceptionMessage('Hora de entrada debe ser de formato hh:mm');
 
         new ParteDiarioHoraEntrada('24:10');
     }
@@ -40,7 +40,7 @@ class ParteDiarioHoraEntradaTest extends TestCase
     public function test_hora_entrada_formato_no_valido_lanza_throw_exception_3()
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage('Hora de entrada deve ser no formato hh:mm');
+        $this->expectExceptionMessage('Hora de entrada debe ser de formato hh:mm');
 
         new ParteDiarioHoraEntrada('08:61');
     }

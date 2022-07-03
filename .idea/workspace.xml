@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="implementano test Domain&#10;ParteDiarioHoraEntradaTest.php,">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioFecha.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioFecha.php" afterDir="false" />
+    <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="utilizando expresiones regulares para el control de las fechas.">
+      <change afterPath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioHoraSalidaTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraEntrada.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraEntrada.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraSalida.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraSalida.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -398,7 +399,7 @@
       <workItem from="1656770543729" duration="87000" />
       <workItem from="1656770790977" duration="1912000" />
       <workItem from="1656801608778" duration="2626000" />
-      <workItem from="1656844097907" duration="15115000" />
+      <workItem from="1656844097907" duration="15706000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
@@ -561,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656857757661</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="utilizando expresiones regulares para el control de las fechas.">
+      <created>1656861073477</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1656861073477</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +611,8 @@
     <MESSAGE value="implementano test Domain&#10;ParteDiarioIdTest.php" />
     <MESSAGE value="implementano test Domain&#10;ParteDiarioFecha.php,&#10;Arreglando nombres de los test" />
     <MESSAGE value="implementano test Domain&#10;ParteDiarioHoraEntradaTest.php," />
-    <option name="LAST_COMMIT_MESSAGE" value="implementano test Domain&#10;ParteDiarioHoraEntradaTest.php," />
+    <MESSAGE value="utilizando expresiones regulares para el control de las fechas." />
+    <option name="LAST_COMMIT_MESSAGE" value="utilizando expresiones regulares para el control de las fechas." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -10,8 +10,8 @@ class ParteDiarioHoraEntrada
 
     public function __construct(string $value)
     {
-        if(!preg_match('/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/', $value)) {
-            throw new \InvalidArgumentException('Hora de entrada deve ser no formato hh:mm');
+        if(!$this->validar($value)) {
+            throw new \InvalidArgumentException('Hora de entrada debe ser de formato hh:mm');
         }
         $this->value = date('H:i', strtotime($value));
     }
@@ -19,5 +19,13 @@ class ParteDiarioHoraEntrada
     public function value(): string
     {
         return $this->value;
+    }
+
+    public function validar($value): bool
+    {
+        if(!preg_match('/^(0\d|1\d]|2[0-3]):[0-5]\d$/', $value)) {
+            return false;
+        }
+        return true;
     }
 }
