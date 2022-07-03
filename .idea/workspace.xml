@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="implementano test Domain&#10;ParteDiarioIdTest.php">
-      <change afterPath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioFechaTest.php" afterDir="false" />
+    <list default="true" id="87880561-8bf7-409f-901b-d9c528a5bc8b" name="Changes" comment="implementano test Domain&#10;ParteDiarioFecha.php,&#10;Arreglando nombres de los test">
+      <change afterPath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioHoraEntradaTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioFecha.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioFecha.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioAlmuerzoTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioAlmuerzoTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioComidaTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioComidaTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioIdTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioIdTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioMeriendaTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioMeriendaTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraEntrada.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkHours/ParteDiario/Domain/ValueObjects/ParteDiarioHoraEntrada.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +259,7 @@
       <recent name="D:\wamp64\www\work-hours" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+  <component name="RunManager" selected="PHPUnit.ParteDiarioHoraEntradaTest">
     <configuration name="ParteDiarioAlmuerzoTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -271,15 +267,6 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner class="Tests\Unit\ParteDiario\Domain\ValueObjects\ParteDiarioAlmuerzoTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioAlmuerzoTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ParteDiarioComidaTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP 8.1" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
-      <TestRunner class="Tests\Unit\ParteDiario\Domain\ValueObjects\ParteDiarioComidaTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioComidaTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="ParteDiarioFechaTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -298,6 +285,15 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner class="Tests\Unit\ParteDiario\Domain\ValueObjects\ParteDiarioFechaTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioFechaTest.php" method="test_should_throw_exception_when_invalid_date_format" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ParteDiarioHoraEntradaTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 8.1" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Unit\ParteDiario\Domain\ValueObjects\ParteDiarioHoraEntradaTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ParteDiario/Domain/ValueObjects/ParteDiarioHoraEntradaTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="ParteDiarioIdTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -331,18 +327,18 @@
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.PhpUnitDocker" />
       <item itemvalue="PHPUnit.ParteDiarioFechaTest.test_should_throw_exception_when_invalid_date_format" />
+      <item itemvalue="PHPUnit.ParteDiarioHoraEntradaTest" />
       <item itemvalue="PHPUnit.ParteDiarioFechaTest" />
       <item itemvalue="PHPUnit.ParteDiarioIdTest" />
-      <item itemvalue="PHPUnit.ParteDiarioComidaTest" />
       <item itemvalue="PHPUnit.ParteDiarioAlmuerzoTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ParteDiarioHoraEntradaTest" />
         <item itemvalue="PHPUnit.ParteDiarioFechaTest.test_should_throw_exception_when_invalid_date_format" />
         <item itemvalue="PHPUnit.ParteDiarioFechaTest" />
         <item itemvalue="PHPUnit.ParteDiarioIdTest" />
         <item itemvalue="PHPUnit.ParteDiarioAlmuerzoTest" />
-        <item itemvalue="PHPUnit.ParteDiarioComidaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -403,7 +399,7 @@
       <workItem from="1656770543729" duration="87000" />
       <workItem from="1656770790977" duration="1912000" />
       <workItem from="1656801608778" duration="2626000" />
-      <workItem from="1656844097907" duration="9630000" />
+      <workItem from="1656844097907" duration="11557000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
@@ -552,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656853329634</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="implementano test Domain&#10;ParteDiarioFecha.php,&#10;Arreglando nombres de los test">
+      <created>1656855901161</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1656855901161</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +595,8 @@
     <MESSAGE value="Modelando Dominio ParteDiario.&#10;Implementado value objets" />
     <MESSAGE value="implementano test Domain&#10;ParteDiarioAlmuerzoTest.php&#10; ParteDiarioComidaTest.php&#10; ParteDiarioMeriendaTest.php" />
     <MESSAGE value="implementano test Domain&#10;ParteDiarioIdTest.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementano test Domain&#10;ParteDiarioIdTest.php" />
+    <MESSAGE value="implementano test Domain&#10;ParteDiarioFecha.php,&#10;Arreglando nombres de los test" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementano test Domain&#10;ParteDiarioFecha.php,&#10;Arreglando nombres de los test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
