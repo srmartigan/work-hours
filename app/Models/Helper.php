@@ -58,7 +58,7 @@ class Helper
     }
 
 
-    public static function dateFormatSpanish(LengthAwarePaginator $parteDiario): void
+    public static function dateFormatSpanish($parteDiario): void
     {
         foreach ($parteDiario as $parte) {
             $parte->fecha = DateTime::createFromFormat('Y-m-d', $parte->fecha)->format('d-m-Y');
