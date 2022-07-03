@@ -10,12 +10,7 @@ class ParteDiarioFecha
 
     public function __construct(string $value)
     {
-        if (!strtotime($value))
-        {
-            throw new \InvalidArgumentException('Invalid date format');
-        }
-        if(!date('d-m-Y', strtotime($value)))
-        {
+        if(!preg_match('/^([012][1-9]|3[01])(\-)(0[1-9]|1[012])\2(\d{4})$/', $value) && !preg_match('/^(\d{4})-(0\d|1[012])-(0\d|1\d|2\d|3[0-1])$/', $value)) {
             throw new \InvalidArgumentException('Invalid date format');
         }
 
