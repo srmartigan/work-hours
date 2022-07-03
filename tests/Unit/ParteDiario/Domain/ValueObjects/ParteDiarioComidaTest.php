@@ -12,7 +12,7 @@ class ParteDiarioComidaTest extends TestCase
     /**
      * @throws ExceptionDomainValueOutOfRange
      */
-    public function testComidaFalse()
+    public function test_Comida_False()
     {
         $dato = 0;
         $comida = new ParteDiarioComida($dato);
@@ -24,7 +24,7 @@ class ParteDiarioComidaTest extends TestCase
     /**
      * @throws ExceptionDomainValueOutOfRange
      */
-    public function testComidaTrue()
+    public function test_Comida_True()
     {
         $dato = 1;
         $comida = new ParteDiarioComida($dato);
@@ -36,7 +36,7 @@ class ParteDiarioComidaTest extends TestCase
     /**
      * @throws ExceptionDomainValueOutOfRange
      */
-    public function testComidaOutOfRange()
+    public function test_Comida_Out_Of_Range()
     {
         $dato = 2;
         $this->expectException(ExceptionDomainValueOutOfRange::class);
@@ -47,7 +47,7 @@ class ParteDiarioComidaTest extends TestCase
     /**
      * @throws ExceptionDomainValueOutOfRange
      */
-    public function testComidaOutOfRangeNegative()
+    public function test_Comida_Out_Of_Range_Negative()
     {
         $dato = -1;
         $this->expectException(ExceptionDomainValueOutOfRange::class);

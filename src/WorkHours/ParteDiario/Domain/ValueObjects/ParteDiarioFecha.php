@@ -10,6 +10,15 @@ class ParteDiarioFecha
 
     public function __construct(string $value)
     {
+        if (!strtotime($value))
+        {
+            throw new \InvalidArgumentException('Invalid date format');
+        }
+        if(!date('d-m-Y', strtotime($value)))
+        {
+            throw new \InvalidArgumentException('Invalid date format');
+        }
+
         $this->value = date('d-m-Y', strtotime($value));
     }
 

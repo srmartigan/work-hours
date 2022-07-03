@@ -12,7 +12,7 @@ class ParteDiarioMeriendaTest extends TestCase
     /**
      * @throws ExceptionDomainValueOutOfRange
      */
-    public function testMeriendaFalse()
+    public function test_Merienda_False()
     {
         $dato = 0;
         $merienda = new ParteDiarioMerienda($dato);
@@ -23,7 +23,7 @@ class ParteDiarioMeriendaTest extends TestCase
     /**
      * @throws ExceptionDomainValueOutOfRange
      */
-    public function testMeriendaTrue()
+    public function test_Merienda_True()
     {
         $dato = 1;
         $merienda = new ParteDiarioMerienda($dato);
@@ -34,7 +34,7 @@ class ParteDiarioMeriendaTest extends TestCase
     /**
      * @throws ExceptionDomainValueOutOfRange
      */
-    public function testMeriendaOutOfRange()
+    public function test_Merienda_Out_Of_Range()
     {
         $this->expectException(ExceptionDomainValueOutOfRange::class);
         $dato = 2;
@@ -45,7 +45,7 @@ class ParteDiarioMeriendaTest extends TestCase
     /**
      * @throws ExceptionDomainValueOutOfRange
      */
-    public function testMeriendaOutOfRangeNegative()
+    public function test_Merienda_Out_Of_Range_Negative()
     {
         $this->expectException(ExceptionDomainValueOutOfRange::class);
         $dato = -1;

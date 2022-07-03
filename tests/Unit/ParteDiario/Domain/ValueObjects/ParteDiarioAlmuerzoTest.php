@@ -35,7 +35,7 @@ class ParteDiarioAlmuerzoTest extends TestCase
     /**
      * @throws \Src\WorkHours\ParteDiario\Domain\Exceptions\ExceptionDomainValueOutOfRange
      */
-    public function testAlmuerzoOutOfRange()
+    public function test_Almuerzo_Out_Of_Range()
     {
         $dato = 2;
         $this->expectException(\Exception::class);
@@ -46,7 +46,7 @@ class ParteDiarioAlmuerzoTest extends TestCase
     /**
      * @throws \Src\WorkHours\ParteDiario\Domain\Exceptions\ExceptionDomainValueOutOfRange
      */
-    public function testAlmuerzoOutOfRangeNegative()
+    public function test_Almuerzo_Out_Of_Range_Negative()
     {
         $dato = -1;
         $this->expectException(\Exception::class);

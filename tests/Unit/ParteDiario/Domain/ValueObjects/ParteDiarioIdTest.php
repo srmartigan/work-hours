@@ -7,14 +7,14 @@ use PHPUnit\Framework\TestCase;
 
 class ParteDiarioIdTest extends TestCase
 {
-    public function testIdSuccess()
+    public function test_Id_Success()
     {
         $dato = 1;
         $id = new ParteDiarioId($dato);
         $this->assertEquals(1, $id->value());
     }
 
-    public function testIdFailMinorZero()
+    public function test_Id_Fail_MinorZero()
     {
         $this->expectException(\Exception::class);
         $dato = -1;
