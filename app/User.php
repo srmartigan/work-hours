@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Mockery\Exception;
@@ -10,6 +11,7 @@ use Mockery\Exception;
 class User extends Authenticatable
 {
     use Notifiable;
+    use hasFactory;
 
     /**
      * The attributes that are mass assignable.

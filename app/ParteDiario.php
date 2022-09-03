@@ -4,12 +4,14 @@ namespace App;
 
 use Carbon\Carbon;
 use Carbon\Traits\Date;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Helper;
 
 class ParteDiario extends Model
 {
+    use HasFactory;
     protected $table = 'parte_diarios';
 
     protected $fillable = [
@@ -24,7 +26,7 @@ class ParteDiario extends Model
         return Carbon::createFromFormat('d-m-Y', $fecha)->format('d-m-Y');
     }
  /* Añadimos parte diario de trabajo a la base de datos */
-    public function addUserForRequest($datos , $userId)
+    public function addUserForRequest($datos , $userId): bool
     {
         $this->userId = $userId;
         $this->fecha = date_create($datos->fecha);

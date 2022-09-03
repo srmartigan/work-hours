@@ -193,10 +193,13 @@ class Helper
         return null;
     }
 
-    public static function validarToken($request): ?object
+    public static function validarToken(Request $request): ?object
     {
         //Validar Toquen --------------------------
         $token = $request->header('token');
+          if (!$token) {
+                return null;
+            }
 
         $objectToken = Helper::autorizarToken($token);
         if (is_null($objectToken) || !isset($objectToken->id)) {
@@ -210,6 +213,8 @@ class Helper
 
         return $objectToken;
     }
+
+
 
 
 }

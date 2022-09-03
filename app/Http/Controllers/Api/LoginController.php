@@ -38,14 +38,13 @@ class LoginController extends Controller
         try {
             $email = $datos->email;
             $password = hash('sha256', $datos->password);
-
             $user = User::query()->where([
                 'email' => $email,
                 'password' => $password
-            ])->firstOrFail();
+            ])->first();
 
         } catch (\Exception $e) {
-            return "Error producido:" . $e;
+            return "Error producido:" ;
         }
 
         if ($user == null) {

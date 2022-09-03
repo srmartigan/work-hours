@@ -16,7 +16,13 @@ use App\Http\Controllers\DocumentosController;
 use App\Http\Controllers\ListadoPartesController;
 use App\Http\Controllers\ParteDiarioController;
 
-//Route::get('/','InicioController@index');
+
+
+Route::get('/', function () {
+    return 'Hola Mundo';
+});
+
+
 //
 //
 //// Rutas Documentos

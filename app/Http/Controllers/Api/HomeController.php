@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\api;
+namespace App\Http\Controllers\Api;
 
 use App\Helper;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,9 +12,13 @@ class HomeController extends Controller
     public function home(Request $request)
     {
 
-
         //Validar Toquen --------------------------
+
         $token = $request->header('token');
+        if ($token == null) {
+            return new JsonResponse(['error' => 'Token no encontrado'], 401);
+        }
+
 
         $objectToken = Helper::autorizarToken($token);
         if (is_null($objectToken) || !isset($objectToken->id)) {
@@ -24,7 +29,7 @@ class HomeController extends Controller
             ],401);
         }
         //fin validar Toquen-------------------------
-var_dump("esoty aqui en master");
+
         $listadoPartesDiario = Helper::queryListadoPartesDiarioApi(
             Helper::getMesActual(),
             Helper::getYearActual(),

@@ -1,9 +1,13 @@
 <?php
 
+/** @var Factory factory */
+
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use App\ParteDiario;
-use Illuminate\Support\Facades\Date;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
 
 class ParteDiarioSeeder extends Seeder
 {
@@ -14,6 +18,8 @@ class ParteDiarioSeeder extends Seeder
      */
     public function run()
     {
-      factory(ParteDiario::class,50)->create();
+       //factoria de partes diarios
+        ParteDiario::factory()->count(100)->create();
+
     }
 }

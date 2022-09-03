@@ -1,7 +1,10 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 
 class UserSeeder extends Seeder
@@ -11,14 +14,14 @@ class UserSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        DB::table('Users')->insert([
+        DB::table('users')->insert([
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'password' =>hash('sha256' ,'1234')
         ]);
-        DB::table('Users')->insert([
+        DB::table('users')->insert([
             'name' => 'lolo',
             'email' => 'lolo@admin.com',
             'password' =>hash ('sha256' ,'1234')

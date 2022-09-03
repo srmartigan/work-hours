@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\api;
+namespace App\Http\Controllers\Api;
 
 use App\Helper;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RequestListadoPartes;
 use App\ParteDiario;
 use Exception;
 use Illuminate\Http\JsonResponse;
@@ -12,7 +13,7 @@ use Illuminate\Http\Request;
 
 class ListadoPartesController extends Controller
 {
-    function ListadoPartes(Request $request): JsonResponse
+    function ListadoPartes(Request $request)
     {
 
         //Validar Toquen --------------------------
@@ -29,12 +30,17 @@ class ListadoPartesController extends Controller
         //fin validar Toquen-------------------------
 
         ParteDiario::clearBootedModels();
-        $mesActual = Helper::getMesActual();
+
+        if (!$request->mes) {
+            $mes = Helper::getMesActual();
+        }else{
+            $mes = $request->mes;
+        }
         $year = Helper::getYearActual();
 
         $listadoPartesDiarios = ParteDiario::query()
             ->where('userId','=',$request->id)
-            ->whereMonth('fecha',$mesActual)
+            ->whereMonth('fecha',$mes)
             ->whereYear('fecha',$year)
             ->orderBy('fecha')
             ->get();

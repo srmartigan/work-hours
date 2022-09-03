@@ -1,26 +1,40 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+namespace Database\Factories;
 
 use App\Helper;
 use App\ParteDiario;
-use Faker\Generator as Faker;
-use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(ParteDiario::class, function (Faker $faker) {
-    $horaEntrada =  $faker->time('H:i' , '22:00');
-    $horaSalida = $faker->time('H:i' , '14:00');
 
-    return [
-        'userId' => $faker->numberBetween(1,2),
-        'fecha' => $faker->dateTimeInInterval('0 years','- 360 days'),
-        'HoraEntrada' => $horaEntrada,
-        'HoraSalida' => $horaSalida,
-        'TotalHoras' => Helper::calcularTotalHoras($horaEntrada,$horaSalida),
-        'almuerzo' => 0,
-        'comida'  => 0,
-        'merienda'  => 0,
+class ParteDiarioFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = ParteDiario::class;
 
-    ];
-});
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition(): array
+    {
+        $horaEntrada =  $this->faker->time('H:i' , '22:00');
+        $horaSalida = $this->faker->time('H:i' , '14:00');
 
+        return [
+            'userId' => $this->faker->numberBetween(1,2),
+            'fecha' => $this->faker->dateTimeInInterval('0 years','- 360 days'),
+            'HoraEntrada' => $horaEntrada,
+            'HoraSalida' => $horaSalida,
+            'TotalHoras' => Helper::calcularTotalHoras($horaEntrada,$horaSalida),
+            'almuerzo' => 0,
+            'comida'  => 0,
+            'merienda'  => 0,
+        ];
+    }
+}
