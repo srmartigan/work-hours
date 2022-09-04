@@ -47,7 +47,7 @@ class HomeController extends Controller
         return response()->json([
             'totalHoras' => $totalHorasNormales,
             'total' => $total,
-            'mes' => Helper::getMesActual(),
+            'mes' => $mes,
             'year' => Helper::getYearActual()
         ],200);
 

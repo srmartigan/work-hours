@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="UPDATE Ver 1.3 con LARAVEL 9">
+    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="añadimos atributo mes al endpoint home.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" afterDir="false" />
     </list>
@@ -304,7 +304,7 @@
       <workItem from="1604488811433" duration="1985000" />
       <workItem from="1661977433707" duration="6359000" />
       <workItem from="1662069202585" duration="2388000" />
-      <workItem from="1662138301282" duration="13434000" />
+      <workItem from="1662138301282" duration="15116000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
@@ -320,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662236976278</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="añadimos atributo mes al endpoint home.">
+      <created>1662288485871</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662288485871</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +359,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Esqueleto basico de la app" />
     <MESSAGE value="UPDATE Ver 1.3 con LARAVEL 9" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE Ver 1.3 con LARAVEL 9" />
+    <MESSAGE value="añadimos atributo mes al endpoint home." />
+    <option name="LAST_COMMIT_MESSAGE" value="añadimos atributo mes al endpoint home." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
