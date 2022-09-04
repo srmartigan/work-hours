@@ -30,8 +30,14 @@ class HomeController extends Controller
         }
         //fin validar Toquen-------------------------
 
+        if($request->mes == null){
+            $mes = Helper::getMesActual();
+        }else{
+            $mes = $request->mes;
+        }
+
         $listadoPartesDiario = Helper::queryListadoPartesDiarioApi(
-            Helper::getMesActual(),
+            $mes,
             Helper::getYearActual(),
             $objectToken->id
         );
