@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="añadimos atributo mes al endpoint home.">
+    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Creando directorio services y creado clase HomeService.php">
+      <change afterPath="$PROJECT_DIR$/app/Domain/HomeDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Domain/HomeServiceInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/HomeService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/HomeService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +56,11 @@
       <list>
         <option value="Jonatan Iglesias Vicente" />
       </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -236,6 +245,7 @@
       <recent name="D:\wamp64\www\work-hours\tests\Unit" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/" />
       <recent name="$PROJECT_DIR$/database/seeders" />
       <recent name="D:\wamp64\www\work-hours\resources\views\layouts" />
       <recent name="D:\wamp64\www\work-hours" />
@@ -304,7 +314,7 @@
       <workItem from="1604488811433" duration="1985000" />
       <workItem from="1661977433707" duration="6359000" />
       <workItem from="1662069202585" duration="2388000" />
-      <workItem from="1662138301282" duration="15116000" />
+      <workItem from="1662138301282" duration="21442000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
@@ -327,7 +337,42 @@
       <option name="project" value="LOCAL" />
       <updated>1662288485871</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="añadimos atributo mes al endpoint home.">
+      <created>1662321814755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1662321814755</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Inicio ServiceHome">
+      <created>1662399206525</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662399206525</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Inicio ServiceHome">
+      <created>1662399222038</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662399222038</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Creando directorio services y creado clase HomeService.php">
+      <created>1662399630884</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1662399630884</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Creando directorio services y creado clase HomeService.php">
+      <created>1662399675302</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1662399675302</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +389,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/serviceHome" />
                       </list>
                     </value>
                   </entry>
@@ -355,12 +400,29 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="serviceHome" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Esqueleto basico de la app" />
     <MESSAGE value="UPDATE Ver 1.3 con LARAVEL 9" />
     <MESSAGE value="añadimos atributo mes al endpoint home." />
-    <option name="LAST_COMMIT_MESSAGE" value="añadimos atributo mes al endpoint home." />
+    <MESSAGE value="Inicio ServiceHome" />
+    <MESSAGE value="Creando directorio services y creado clase HomeService.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creando directorio services y creado clase HomeService.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

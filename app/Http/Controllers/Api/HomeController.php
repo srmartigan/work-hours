@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\HomeDto;
 use App\Helper;
 use App\Http\Controllers\Controller;
+use App\Services\HomeService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function home(Request $request)
+    public function home(Request $request, HomeService $homeService)
     {
 
         //Validar Toquen --------------------------
@@ -35,20 +37,22 @@ class HomeController extends Controller
         }else{
             $mes = $request->mes;
         }
+        $response = $homeService->execute(new HomeDto($objectToken->id,'','',$mes,2022));
 
-        $listadoPartesDiario = Helper::queryListadoPartesDiarioApi(
-            $mes,
-            Helper::getYearActual(),
-            $objectToken->id
-        );
-        $totalHorasNormales = Helper::sumarHorasNormales($listadoPartesDiario);
-        $total = Helper::calcularTotalPrecioNormalApi($totalHorasNormales,$objectToken->id);
+//        $listadoPartesDiario = Helper::queryListadoPartesDiarioApi(
+//            $mes,
+//            Helper::getYearActual(),
+//            $objectToken->id
+//        );
+//        $totalHorasNormales = Helper::sumarHorasNormales($listadoPartesDiario);
+//        $total = Helper::calcularTotalPrecioNormalApi($totalHorasNormales,$objectToken->id);
+
 
         return response()->json([
-            'totalHoras' => $totalHorasNormales,
-            'total' => $total,
-            'mes' => $mes,
-            'year' => Helper::getYearActual()
+            'totalHoras' => $response['totalHoras'],
+            'total' => $response['total'],
+            'mes' => $response['mes'],
+            'year' => $response['year'],
         ],200);
 
     }
