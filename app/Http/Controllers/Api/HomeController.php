@@ -14,46 +14,23 @@ class HomeController extends Controller
     public function home(Request $request, HomeService $homeService)
     {
 
-        //Validar Toquen --------------------------
+        $objectToken = Helper::validarToken($request);
 
-        $token = $request->header('token');
-        if ($token == null) {
-            return new JsonResponse(['error' => 'Token no encontrado'], 401);
-        }
+        $mes = null;
+        $request->mes == null ? $mes = Helper::getMesActual() : $mes = $request->mes;
+
+        $year = null;
+        $request->year == null ? $year = Helper::getYearActual() : $year = $request->year;
 
 
-        $objectToken = Helper::autorizarToken($token);
-        if (is_null($objectToken) || !isset($objectToken->id)) {
-            return response()->json([
-                'status' => 'error',
-                'code' => '401',
-                'message' => 'error autorizacion'
-            ],401);
-        }
-        //fin validar Toquen-------------------------
-
-        if($request->mes == null){
-            $mes = Helper::getMesActual();
-        }else{
-            $mes = $request->mes;
-        }
-        $response = $homeService->execute(new HomeDto($objectToken->id,'','',$mes,2022));
-
-//        $listadoPartesDiario = Helper::queryListadoPartesDiarioApi(
-//            $mes,
-//            Helper::getYearActual(),
-//            $objectToken->id
-//        );
-//        $totalHorasNormales = Helper::sumarHorasNormales($listadoPartesDiario);
-//        $total = Helper::calcularTotalPrecioNormalApi($totalHorasNormales,$objectToken->id);
-
+        $response = $homeService->execute(new HomeDto($objectToken->id, '', '', $mes, $year));
 
         return response()->json([
             'totalHoras' => $response['totalHoras'],
             'total' => $response['total'],
             'mes' => $response['mes'],
             'year' => $response['year'],
-        ],200);
+        ], 200);
 
     }
 }
