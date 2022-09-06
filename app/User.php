@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Domain\RegisterNotFoundException;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -46,23 +47,23 @@ class User extends Authenticatable
      *      $datos->email ,
      *      $datos->password
      */
-        static public function crearUsuario($datos)
-    {
+        static public function crearUsuario($data): User
+        {
+            if(User::query()->where('email', $data->email)->exists()){
+                throw new RegisterNotFoundException('El email ya existe');
+            }
         try {
-            $usuario = new User();
-            $usuario->name = $datos->nombre;
-            $usuario->email = $datos->email;
-            $usuario->password =  hash ('sha256' , $datos->password);
-            $usuario->save();
+            $user = new User();
+            $user->name = $data->nombre;
+            $user->email = $data->email;
+            $user->password =  hash ('sha256' , $data->password);
+            $user->save();
         }catch (Exception $e)
         {
-            return response(
-                $error = 'error al crear el usuario -> ' . $e,
-                $status = 400
-            );
+            throw new RegisterNotFoundException();
         }
 
-        return $usuario;
+        return $user;
 
     }
 

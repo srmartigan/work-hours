@@ -14,44 +14,38 @@ class RegisterController extends Controller
 
          //TODO: Falta añadir que se cree la configuracion del usuario nuevo registrado
 
-        $datos = json_decode($request->json);
+        $data = json_decode($request->json);
 
-        if (!$this->ComprobarDatos($datos)){
-            return response(
-                $error = 'error faltan parametros',
-                $status = 400
-            );
-        }
-
-        if (!$this->validateLogin($datos)) {
+        //validamos los datos
+        if (!$this->validateRegister($data)) {
             return response()->json([
-                'error' => 'Fallo al validar argumentos',
+                'error' => 'Error: Los datos introducídos no son válidos',
                 'status' => 400
             ], 400);
         }
 
-        $usuario = User::crearUsuario($datos);
-
-        return response(
-            $mensaje = 'Usuario registrado correctamente',
-            $status = 200
-        );
-    }
-
-    function ComprobarDatos($datos)
-    {
-        if (!isset($datos->nombre) || !isset($datos->email) || !isset($datos->password)){
-            return false;
+        try
+        {
+            $user = User::crearUsuario($data);
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => $e->getMessage(),
+                'status' => 400
+            ], 400);
         }
 
-        return true;
+
+        return response()->json([
+            'mensaje' => 'Usuario registrado correctamente',
+            'status' => 200
+        ]);
     }
 
-    protected function validateLogin($datos): bool
+    private function validateRegister(mixed $data): bool
     {
-        $validator = Validator::make((array)$datos, [
+        $validator = Validator::make((array)$data, [
             'nombre' => 'required',
-            'email' => 'required | unique:users',
+            'email' => 'required | email:rfc,dns',
             'password' => 'required | between:4,12',
         ]);
 
