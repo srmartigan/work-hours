@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Helper;
 use App\Http\Controllers\Controller;
+use App\Services\UserLoginService;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -14,50 +15,33 @@ class LoginController extends Controller
     /*
      *  requiere un email y un password para loguearse
      */
-    public function index(Request $request)
+    public function index(Request $request, UserLoginService $userLoginService)
     {
 
         $datos = json_decode($request->json);
 
-        //TODO: Comprobar error cuando el password no es correcto...
-        if (!isset($datos->email) || !isset($datos->password)) {
-            return response()->json([
-                'error' => 'Faltan argumentos',
-                'status' => 400
-            ], 400);
-        }
-
         if (!$this->validateLogin($datos)) {
             return response()->json([
-                'error' => 'Fallo al validar argumentos',
+                'error' => 'Error: Los datos introducídos no son válidos',
                 'status' => 400
             ], 400);
         }
-
 
         try {
             $email = $datos->email;
             $password = hash('sha256', $datos->password);
-            $user = User::query()->where([
-                'email' => $email,
-                'password' => $password
-            ])->first();
+            $tokenDto = $userLoginService->execute($email, $password);
 
         } catch (\Exception $e) {
-            return "Error producido:" ;
-        }
-
-        if ($user == null) {
             return response()->json([
                 'error' => 'No existe ningun usuario con esos datos',
                 'status' => 400
-            ], 400);
+            ], 400 );
         }
 
-
         return response()->json([
-            'token' => Helper::crearToken($user),
-            'id' => $user->id,
+            'token' => $tokenDto->valueToken(),
+            'id' => $tokenDto->valueId(),
             'status' => 200,
         ]);
     }

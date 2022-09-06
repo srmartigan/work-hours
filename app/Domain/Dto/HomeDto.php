@@ -19,7 +19,7 @@ class HomeDto
         $this->year = $year;
     }
 
-    public function datos() : array
+    public function data() : array
     {
         return [
             'totalHoras' => $this->totalHoras,

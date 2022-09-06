@@ -14,16 +14,16 @@ class HomeService
     {
     }
 
-    public function execute(HomeDto $datos): array
+    public function execute(HomeDto $homeData): array
     {
         $listadoPartesDiario = Helper::queryListadoPartesDiarioApi(
-            $datos->mes,
-            $datos->year,
-            $datos->id
+            $homeData->mes,
+            $homeData->year,
+            $homeData->id
         );
-        $datos->totalHoras = Helper::sumarHorasNormales($listadoPartesDiario);
-        $datos->total = Helper::calcularTotalPrecioNormalApi($datos->totalHoras,$datos->id);
+        $homeData->totalHoras = Helper::sumarHorasNormales($listadoPartesDiario);
+        $homeData->total = Helper::calcularTotalPrecioNormalApi($homeData->totalHoras,$homeData->id);
 
-        return $datos->datos();
+        return $homeData->data();
     }
 }

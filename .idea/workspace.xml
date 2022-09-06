@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Creando directorio services y creado clase HomeService.php">
-      <change afterPath="$PROJECT_DIR$/app/Domain/HomeDto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Domain/HomeServiceInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Implementando HomeService.php">
+      <change afterPath="$PROJECT_DIR$/app/Domain/Dto/TokenDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Domain/LoginNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/UserLoginService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domain/HomeDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Dto/HomeDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/HomeService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/HomeService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +60,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="serviceHome" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -222,22 +223,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Project.color": "031f20",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/srmartigan/www/xampp/work-hours-front",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;031f20&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/srmartigan/www/xampp/work-hours-front&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -245,6 +246,7 @@
       <recent name="D:\wamp64\www\work-hours\tests\Unit" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Domain/Dto/" />
       <recent name="$PROJECT_DIR$/app/" />
       <recent name="$PROJECT_DIR$/database/seeders" />
       <recent name="D:\wamp64\www\work-hours\resources\views\layouts" />
@@ -278,10 +280,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.parteDiarioTest.testCreateParteDiario" />
         <item itemvalue="PHPUnit.RutasVistasAppTest.testRutaListadoPartes" />
         <item itemvalue="PHPUnit.RutasVistasAppTest.testRutaDocumentos" />
         <item itemvalue="PHPUnit.RutasVistasAppTest" />
+        <item itemvalue="PHPUnit.parteDiarioTest.testCreateParteDiario" />
         <item itemvalue="PHPUnit.HelperTest" />
       </list>
     </recent_temporary>
@@ -314,7 +316,9 @@
       <workItem from="1604488811433" duration="1985000" />
       <workItem from="1661977433707" duration="6359000" />
       <workItem from="1662069202585" duration="2388000" />
-      <workItem from="1662138301282" duration="21442000" />
+      <workItem from="1662138301282" duration="23157000" />
+      <workItem from="1662484155107" duration="223000" />
+      <workItem from="1662484387373" duration="8434000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE Ver 1.3 con LARAVEL 9">
       <created>1655485313649</created>
@@ -372,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662399675302</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implementando HomeService.php">
+      <created>1662403375079</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1662403375079</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,6 +392,16 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="43f17a8b-371d-4906-b58b-d71ca40b45d9">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="9f5860e5-dd31-4654-996e-0f4c4c7f5631">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -389,13 +410,23 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/serviceHome" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
                 </map>
               </option>
+              <option name="TEXT_FILTER_SETTINGS">
+                <TextFilterSettings>
+                  <option name="REGEX" value="true" />
+                </TextFilterSettings>
+              </option>
             </State>
+          </value>
+        </entry>
+        <entry key="d80a99bb-3656-4733-9d90-ea020689e5ab">
+          <value>
+            <State />
           </value>
         </entry>
       </map>
@@ -422,7 +453,8 @@
     <MESSAGE value="añadimos atributo mes al endpoint home." />
     <MESSAGE value="Inicio ServiceHome" />
     <MESSAGE value="Creando directorio services y creado clase HomeService.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creando directorio services y creado clase HomeService.php" />
+    <MESSAGE value="Implementando HomeService.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementando HomeService.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
