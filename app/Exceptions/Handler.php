@@ -43,13 +43,17 @@ class Handler extends ExceptionHandler
      * Render an exception into an HTTP response.
      *
      * @param \Illuminate\Http\Request $request
-     * @param Throwable $exception
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @param \Exception $exception
+     * @return \Illuminate\Http\Response
      * @throws Throwable
      */
-    public function render($request, Throwable $exception)
+    public function render($request, Throwable $exception): \Symfony\Component\HttpFoundation\Response
     {
-
+        if ($exception instanceof \Illuminate\Auth\Access\AuthorizationException) {
+            return response()->json([
+                'error' => $exception->getMessage()
+            ], 403);
+        }
         return parent::render($request, $exception);
     }
 }

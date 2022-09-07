@@ -34,7 +34,10 @@ class UserSeeder extends Seeder
                 'userId' => $user->id,
                 'descuento_almuerzo' => 0,
                 'descuento_comida' => 0,
-                'descuento_merienda' => 0
+                'descuento_merienda' => 0,
+                'precio_hora' => 0,
+                'precio_hora_estructurada' => 0,
+                'precio_hora_extra' => 0,
             ]);
         }
     }

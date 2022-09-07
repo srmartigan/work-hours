@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\ConfiguracionUsuario;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RequestAuth;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request, ConfiguracionUsuario $configuracionUsuario)
     {
-
-         //TODO: Falta añadir que se cree la configuracion del usuario nuevo registrado
 
         $data = json_decode($request->json);
 
@@ -27,6 +27,7 @@ class RegisterController extends Controller
         try
         {
             $user = User::crearUsuario($data);
+            $configuracionUsuario->create($user->id);
         } catch (\Exception $e) {
             return response()->json([
                 'error' => $e->getMessage(),

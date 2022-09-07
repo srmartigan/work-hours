@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use App\Domain\HomeDto;
+use App\Domain\Dto\HomeDto;
 use App\Helper;
 
 class HomeService

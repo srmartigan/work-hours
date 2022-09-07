@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Domain\HomeDto;
+use App\Domain\Dto\HomeDto;
 use App\Helper;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\RequestAuth;
 use App\Services\HomeService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function home(Request $request, HomeService $homeService)
+    public function home(RequestAuth $request, HomeService $homeService): JsonResponse
     {
 
-        $objectToken = Helper::validarToken($request);
+        $id = $request->id;
 
         $mes = null;
         $request->mes == null ? $mes = Helper::getMesActual() : $mes = $request->mes;
@@ -23,7 +24,7 @@ class HomeController extends Controller
         $request->year == null ? $year = Helper::getYearActual() : $year = $request->year;
 
 
-        $response = $homeService->execute(new HomeDto($objectToken->id, '', '', $mes, $year));
+        $response = $homeService->execute(new HomeDto($id, '', '', $mes, $year));
 
         return response()->json([
             'totalHoras' => $response['totalHoras'],
@@ -33,4 +34,6 @@ class HomeController extends Controller
         ], 200);
 
     }
+
+
 }

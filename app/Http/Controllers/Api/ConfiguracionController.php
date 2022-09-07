@@ -25,24 +25,18 @@ class ConfiguracionController extends Controller
         //fin validar Toquen-------------------------
 
         $config = ConfiguracionUsuario::query()
-            ->where('userId', '=', $objectToken->id)
+            ->where('userId', $objectToken->id)
             ->get();
 
         if ($config == null) {
             $config = new ConfiguracionUsuario();
-            $config->userId = $objectToken->id;
-            $config->descuento_almuerzo = 0;
-            $config->descuento_comida = 0;
-            $config->descuento_merienda = 0;
-            $config->precio_hora = 0;
-            $config->precio_hora_estructurada = 0;
-            $config->precio_hora_extra = 0;
-            $config->save();
+            $config->create($objectToken->id);
         }
 
         return response()->json([
-           'json' => $config,
-
+            'json' => $config,
+            'status' => 'success',
+            'message' => 'configuración enviada correctamente'
         ], 200);
     }
 
