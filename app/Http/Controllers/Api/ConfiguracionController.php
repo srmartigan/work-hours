@@ -3,35 +3,21 @@
 namespace App\Http\Controllers\Api;
 
 use App\ConfiguracionUsuario;
-use App\Helper;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\RequestAuth;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Validator;
+
 
 class ConfiguracionController extends Controller
 {
-    function verConfiguracion(Request $request)
+    public function verConfiguracion(RequestAuth $request): JsonResponse
     {
-        //Validar Toquen --------------------------
-        $token = $request->header('token');
-
-        $objectToken = Helper::autorizarToken($token);
-        if (is_null($objectToken) || !isset($objectToken->id)) {
-            return response()->json([
-                'status' => 'error',
-                'code' => '401',
-                'message' => 'error autorizacion'
-            ], 401);
-        }
-        //fin validar Toquen-------------------------
+        $id = $request->id;
 
         $config = ConfiguracionUsuario::query()
-            ->where('userId', $objectToken->id)
+            ->where('userId', $id)
             ->get();
-
-        if ($config == null) {
-            $config = new ConfiguracionUsuario();
-            $config->create($objectToken->id);
-        }
 
         return response()->json([
             'json' => $config,
@@ -40,14 +26,21 @@ class ConfiguracionController extends Controller
         ], 200);
     }
 
-    function guardarConfiguracion(Request $request)
+    function guardarConfiguracion(RequestAuth $request): JsonResponse
     {
+        $id = $request->id;
         $datos = json_decode($request->json);
 
-        $objectToken = Helper::validarToken($request);
+        if(!$this->validateConfiguracion($datos))
+        {
+            return response()->json([
+                'error' => 'Error: Los datos introducídos no son válidos',
+                'status' => 400
+            ], 400);
+        }
 
         $config = ConfiguracionUsuario::query()
-            ->where('userId', '=', $objectToken->id);
+            ->where('userId', '=', $id);
 
         $config->update([
             'descuento_almuerzo' => $datos->descuentoAlmuerzo,
@@ -59,9 +52,26 @@ class ConfiguracionController extends Controller
         ]);
 
         return response()->json([
-
             'status' => 'success'
         ]);
+    }
+
+    private function validateConfiguracion(mixed $datos): bool
+    {
+        $validator = Validator::make((array)$datos, [
+            'descuentoAlmuerzo' => 'required | numeric',
+            'descuentoComida' => 'required | numeric',
+            'descuentoMerienda' => 'required | numeric',
+            'precioHora' => 'required | numeric',
+            'precioHoraEstructurada' => 'required | numeric',
+            'precioHoraExtra' => 'required | numeric',
+        ]);
+
+        if ($validator->fails()) {
+            return false;
+        }
+
+        return true;
     }
 
 }
