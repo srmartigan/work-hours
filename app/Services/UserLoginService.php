@@ -4,8 +4,8 @@ namespace App\Services;
 
 use App\Domain\Dto\TokenDto;
 use App\Domain\LoginNotFoundException;
-use App\Helper;
-use App\User;
+use App\Models\Helper;
+use App\Models\User;
 
 class UserLoginService
 {

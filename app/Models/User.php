@@ -69,11 +69,11 @@ class User extends Authenticatable
 
     public function configuracion()
     {
-        return $this->hasOne('App\ConfiguracionUsuario','userId');
+        return $this->hasOne('App\Models\ConfiguracionUsuario','userId');
     }
 
     public function parteDiario()
     {
-        return $this->hasMany('App\ParteDiario','userId');
+        return $this->hasMany('App\Models\ParteDiario','userId');
     }
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Domain\Dto\HomeDto;
-use App\Helper;
+use App\Models\Helper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RequestAuth;
 use App\Services\HomeService;

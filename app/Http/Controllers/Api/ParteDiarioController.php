@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Helper;
+use App\Models\Helper;
 use App\Http\Controllers\Controller;
-use App\ParteDiario;
-use App\User;
+use App\Models\ParteDiario;
+use App\Models\User;
 use http\Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

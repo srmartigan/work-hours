@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Helper;
+use App\Models\Helper;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
