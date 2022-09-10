@@ -15,13 +15,13 @@ class HomeController extends Controller
     public function home(RequestAuth $request, HomeService $homeService): JsonResponse
     {
 
-        $id = $request->id;
+        $id = $request['id'] ?? null;
 
         $mes = null;
-        $request->mes == null ? $mes = Helper::getMesActual() : $mes = $request->mes;
+        $request['mes'] == null ? $mes = Helper::getMesActual() : $mes = $request['mes'];
 
         $year = null;
-        $request->year == null ? $year = Helper::getYearActual() : $year = $request->year;
+        $request['year'] == null ? $year = Helper::getYearActual() : $year = $request['year'];
 
 
         $response = $homeService->execute(new HomeDto($id, '', '', $mes, $year));

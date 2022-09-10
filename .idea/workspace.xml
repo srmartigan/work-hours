@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Refactoring HomeController llevado lógica Auth al RequestAuth personalizado.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ConfiguracionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ConfiguracionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ListadoPartesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ListadoPartesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ParteDiarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ParteDiarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/RequestAuth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/RequestAuth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/HomeService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/HomeService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/UserLoginService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserLoginService.php" afterDir="false" />
-    </list>
+    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Arreglando Namespace después de mover los modelos a su carpeta." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -405,7 +395,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662583225083</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Arreglando Namespace después de mover los modelos a su carpeta.">
+      <created>1662833897846</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1662833897846</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Arreglando Namespace después de mover los modelos a su carpeta.">
+      <created>1662833916927</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1662833916927</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +483,8 @@
     <MESSAGE value="Implementando UserLoginService.php y refactorizando LoginController.php" />
     <MESSAGE value="Refactoring RegisterController.php" />
     <MESSAGE value="Refactoring HomeController llevado lógica Auth al RequestAuth personalizado." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring HomeController llevado lógica Auth al RequestAuth personalizado." />
+    <MESSAGE value="Arreglando Namespace después de mover los modelos a su carpeta." />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglando Namespace después de mover los modelos a su carpeta." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
