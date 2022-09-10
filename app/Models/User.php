@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Domain\Dto\RegisterDto;
 use App\Domain\RegisterNotFoundException;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -47,16 +48,16 @@ class User extends Authenticatable
      *      $datos->email ,
      *      $datos->password
      */
-        static public function crearUsuario($data): User
+        static public function crearUsuario(RegisterDto $data): User
         {
-            if(User::query()->where('email', $data->email)->exists()){
+            if(User::query()->where('email', $data->email())->exists()){
                 throw new RegisterNotFoundException('El email ya existe');
             }
         try {
             $user = new User();
-            $user->name = $data->nombre;
-            $user->email = $data->email;
-            $user->password =  hash ('sha256' , $data->password);
+            $user['name'] = $data->nombre();
+            $user['email'] = $data->email();
+            $user['password'] =  hash ('sha256' , $data->password());
             $user->save();
         }catch (Exception $e)
         {

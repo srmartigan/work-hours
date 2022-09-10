@@ -5,19 +5,20 @@ namespace App\Http\Controllers\Api;
 use App\Models\ConfiguracionUsuario;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Domain\Dto\RegisterDto;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+
 
 class RegisterController extends Controller
 {
     public function index(Request $request, ConfiguracionUsuario $configuracionUsuario): JsonResponse
     {
-
-        $data = json_decode($request['json']);
+        $registeDto = RegisterDto::create(...json_decode($request['json'],true));
 
         //validamos los datos
-        if (!$this->validateRegister($data)) {
+        if (!$this->validateRegister($registeDto)) {
             return response()->json([
                 'error' => 'Error: Los datos introducídos no son válidos',
                 'status' => 400
@@ -26,7 +27,7 @@ class RegisterController extends Controller
 
         try
         {
-            $user = User::crearUsuario($data);
+            $user = User::crearUsuario($registeDto);
             $configuracionUsuario->create($user['id']);
         } catch (\Exception $e) {
             return response()->json([
@@ -42,9 +43,9 @@ class RegisterController extends Controller
         ]);
     }
 
-    private function validateRegister(mixed $data): bool
+    private function validateRegister(RegisterDto $data): bool
     {
-        $validator = Validator::make((array)$data, [
+        $validator = Validator::make($data->toArray(), [
             'nombre' => 'required',
             'email' => 'required | email:rfc,dns',
             'password' => 'required | between:4,12',
