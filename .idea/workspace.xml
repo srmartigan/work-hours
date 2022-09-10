@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="Arreglando Namespace después de mover los modelos a su carpeta." />
+    <list default="true" id="becc275d-db91-49bc-8940-7463a97c15c3" name="Default Changelist" comment="pequeños cambios." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -409,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662833916927</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="pequeños cambios.">
+      <created>1662834401005</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1662834401005</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +491,8 @@
     <MESSAGE value="Refactoring RegisterController.php" />
     <MESSAGE value="Refactoring HomeController llevado lógica Auth al RequestAuth personalizado." />
     <MESSAGE value="Arreglando Namespace después de mover los modelos a su carpeta." />
-    <option name="LAST_COMMIT_MESSAGE" value="Arreglando Namespace después de mover los modelos a su carpeta." />
+    <MESSAGE value="pequeños cambios." />
+    <option name="LAST_COMMIT_MESSAGE" value="pequeños cambios." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
