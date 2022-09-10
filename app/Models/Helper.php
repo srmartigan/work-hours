@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App;
+namespace App\Models;
 
 
 use Carbon\Carbon;
@@ -59,7 +59,7 @@ class Helper
     }
 
     /**
-     * @param \Illuminate\Contracts\Pagination\LengthAwarePaginator $parteDiario
+     * @param LengthAwarePaginator $parteDiario
      */
     public static function dateFormatSpanish($parteDiario): void
     {
