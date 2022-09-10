@@ -4,17 +4,17 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\ConfiguracionUsuario;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\RequestAuth;
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
-    public function index(Request $request, ConfiguracionUsuario $configuracionUsuario)
+    public function index(Request $request, ConfiguracionUsuario $configuracionUsuario): JsonResponse
     {
 
-        $data = json_decode($request->json);
+        $data = json_decode($request['json']);
 
         //validamos los datos
         if (!$this->validateRegister($data)) {
@@ -27,7 +27,7 @@ class RegisterController extends Controller
         try
         {
             $user = User::crearUsuario($data);
-            $configuracionUsuario->create($user->id);
+            $configuracionUsuario->create($user['id']);
         } catch (\Exception $e) {
             return response()->json([
                 'error' => $e->getMessage(),
