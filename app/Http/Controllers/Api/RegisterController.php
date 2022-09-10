@@ -6,6 +6,7 @@ use App\Models\ConfiguracionUsuario;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Domain\Dto\RegisterDto;
+use App\Services\UserRegisterService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -13,9 +14,13 @@ use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
-    public function index(Request $request, ConfiguracionUsuario $configuracionUsuario): JsonResponse
+    public function index(
+        Request              $request,
+        ConfiguracionUsuario $configuracionUsuario,
+        UserRegisterService  $userRegisterService
+    ): JsonResponse
     {
-        $registeDto = RegisterDto::create(...json_decode($request['json'],true));
+        $registeDto = RegisterDto::create(...json_decode($request['json'], true));
 
         //validamos los datos
         if (!$this->validateRegister($registeDto)) {
@@ -25,10 +30,9 @@ class RegisterController extends Controller
             ], 400);
         }
 
-        try
-        {
-            $user = User::crearUsuario($registeDto);
-            $configuracionUsuario->create($user['id']);
+
+        try {
+            $userRegisterService->execute($registeDto);
         } catch (\Exception $e) {
             return response()->json([
                 'error' => $e->getMessage(),
