@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Domain\Dto\ListadoPartesDto;
 use App\Http\Requests\RequestAuth;
 use App\Models\Helper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RequestListadoPartes;
 use App\Models\ParteDiario;
+use App\Services\ListadoPartesService;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -14,23 +16,17 @@ use Illuminate\Http\Request;
 
 class ListadoPartesController extends Controller
 {
-    function ListadoPartes(RequestAuth $request): JsonResponse
+    function ListadoPartes(RequestAuth $request, ListadoPartesService $listadoPartesService): JsonResponse
     {
         //TODO: En el front no se debe enviar el id del usuario, sino con el token vale
         $mes = !$request->mes ? Helper::getMesActual() : $request->mes;
         $year = Helper::getYearActual();
 
-        $listadoPartesDiarios = ParteDiario::query()
-            ->where('userId','=',$request->id)
-            ->whereMonth('fecha',$mes)
-            ->whereYear('fecha',$year)
-            ->orderBy('fecha')
-            ->get();
+        $listadoPartesDiarios = $listadoPartesService->execute( ListadoPartesDto::create($request->id, $mes, $year) );
 
-        Helper::dateFormatSpanish($listadoPartesDiarios); // convert date "Y-m-d" to "d-m-Y"
 
         return response()->json([
-            'json' => $listadoPartesDiarios->toArray(),
+            'json' => $listadoPartesDiarios,
             'status' => 200,
         ]);
     }
