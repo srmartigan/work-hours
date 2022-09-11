@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 
+use App\Domain\Dto\LoginDto;
 use App\Http\Controllers\Controller;
 use App\Services\UserLoginService;
 use Illuminate\Http\Request;
@@ -17,9 +18,9 @@ class LoginController extends Controller
     public function index(Request $request, UserLoginService $userLoginService)
     {
 
-        $datos = json_decode($request->json);
+        $json = json_decode($request['json'], true);
 
-        if (!$this->validateLogin($datos)) {
+        if (!$this->validateLogin($json)) {
             return response()->json([
                 'error' => 'Error: Los datos introducídos no son válidos',
                 'status' => 400
@@ -27,13 +28,11 @@ class LoginController extends Controller
         }
 
         try {
-            $email = $datos->email;
-            $password = hash('sha256', $datos->password);
-            $tokenDto = $userLoginService->execute($email, $password);
+              $tokenDto = $userLoginService->execute(LoginDto::create(...$json));
 
         } catch (\Exception $e) {
             return response()->json([
-                'error' => 'No existe ningun usuario con esos datos',
+                'error' => $e->getMessage(),
                 'status' => 400
             ], 400 );
         }
@@ -45,9 +44,9 @@ class LoginController extends Controller
         ]);
     }
 
-    protected function validateLogin($datos): bool
+    protected function validateLogin($json): bool
     {
-        $validator = Validator::make((array)$datos, [
+        $validator = Validator::make($json, [
             'email' => 'required | email:rfc,dns',
             'password' => 'required | between:4,12',
         ]);
