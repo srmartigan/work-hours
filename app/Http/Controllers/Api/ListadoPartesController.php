@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Domain\Dto\ListadoPartesDto;
-use App\Http\Requests\RequestAuth;
-use App\Models\Helper;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\RequestListadoPartes;
-use App\Models\ParteDiario;
-use App\Services\ListadoPartesService;
-use Exception;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
+use App\Http\Requests\RequestAuth;
+use App\Domain\Dto\ListadoPartesDto;
+use App\Services\BuscarParteService;
+use App\Services\ListadoPartesService;
+use App\Models\Helper;
 
 
 class ListadoPartesController extends Controller
@@ -31,31 +28,18 @@ class ListadoPartesController extends Controller
         ]);
     }
 
-    function verParte( $id, Request $request): JsonResponse
+    function verParte( $id, RequestAuth $request, BuscarParteService $buscarParteService): JsonResponse
     {
 
-        //Validar Toquen --------------------------
-        $token = $request->header('token');
+        try
+        {
+            $parte = $buscarParteService->execute($id, $request->id);
 
-        $objectToken = Helper::autorizarToken($token);
-
-        if (is_null($objectToken) || !isset($objectToken->id)) {
+        } catch (\Exception $e ) {
             return response()->json([
-                'status' => 'error',  //'success'
-                'code' => '401',
-                'message' => 'error autorizacion'
-            ],401);
-        }
-        //fin validar Toquen-------------------------
-
-            $parte = ParteDiario::find($id);
-
-        if (is_null($parte)){
-
-            return response()->json([
-                'message' => 'Parte no encontrado',
+                'message' => $e->getMessage(),
                 'status' => '400',
-                ],400);
+            ],200);
         }
 
         return response()->json([
